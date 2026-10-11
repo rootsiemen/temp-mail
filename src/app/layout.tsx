@@ -31,6 +31,10 @@ export const metadata: Metadata = {
     "anonymous email",
   ],
   authors: [{ name: "Abahi" }],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   alternates: {
     canonical: SITE_URL,
   },
