@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "FAQ — Temporary Email Questions Answered",
   description:
     "Frequently asked questions about Abahi Temp Mail: how temporary email works, how long messages are kept, whether it is free, and more.",
-  alternates: { canonical: "https://abahi.tech/faq" },
+  alternates: { canonical: "https://tempmaill.tech/faq" },
 };
 
 const FAQS: { q: string; a: string }[] = [
@@ -23,7 +23,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can I choose my own address instead of a random one?",
-    a: "Yes. Type any prefix you like (letters, numbers, dots, dashes, underscores) in the box under your address and click 'Use this'. Your address becomes your-choice@abahi.tech.",
+    a: "Yes. Type any prefix you like (letters, numbers, dots, dashes, underscores) in the box under your address and click 'Use this'. Your address becomes your-choice@tempmaill.tech.",
   },
   {
     q: "How long are messages kept?",

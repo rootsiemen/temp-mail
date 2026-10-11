@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn what Abahi Temp Mail is, why we built a free temporary email service, and how we protect your privacy.",
-  alternates: { canonical: "https://abahi.tech/about" },
+  alternates: { canonical: "https://tempmaill.tech/about" },
 };
 
 export default function AboutPage() {

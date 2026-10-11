@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Abahi Temp Mail terms of service: acceptable use, limitations of temporary email, and service availability.",
-  alternates: { canonical: "https://abahi.tech/terms" },
+  alternates: { canonical: "https://tempmaill.tech/terms" },
 };
 
 const SECTIONS: { heading: string; body: string[] }[] = [

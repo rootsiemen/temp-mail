@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Blog — Email Privacy Guides",
   description:
     "Practical guides on temporary email, disposable addresses, and keeping your real inbox spam-free.",
-  alternates: { canonical: "https://abahi.tech/blog" },
+  alternates: { canonical: "https://tempmaill.tech/blog" },
 };
 
 export default function BlogIndexPage() {

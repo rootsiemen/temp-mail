@@ -9,7 +9,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://abahi.tech";
+const SITE_URL = "https://tempmaill.tech";
 const SITE_NAME = "Abahi Temp Mail";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Abahi Temp Mail",
   },
   description:
-    "Get a free temporary email address instantly at abahi.tech. Protect your real inbox from spam when signing up for websites, free trials, and downloads. No signup required — emails auto-delete after 1 hour.",
+    "Get a free temporary email address instantly at tempmaill.tech. Protect your real inbox from spam when signing up for websites, free trials, and downloads. No signup required — emails auto-delete after 1 hour.",
   keywords: [
     "temp mail",
     "temporary email",

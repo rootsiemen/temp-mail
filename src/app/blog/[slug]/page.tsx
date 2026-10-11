@@ -18,11 +18,11 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical: `https://abahi.tech/blog/${post.slug}` },
+    alternates: { canonical: `https://tempmaill.tech/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://abahi.tech/blog/${post.slug}`,
+      url: `https://tempmaill.tech/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
     },

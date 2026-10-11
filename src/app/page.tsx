@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Abahi Temp Mail — Free Temporary Disposable Email Address",
   description:
     "Get a free temporary email address instantly. Use it for signups, trials, and downloads — keep your real inbox 100% spam-free. No signup required.",
-  alternates: { canonical: "https://abahi.tech" },
+  alternates: { canonical: "https://tempmaill.tech" },
 };
 
 const STEPS = [
@@ -31,7 +31,7 @@ const FEATURES = [
   },
   {
     title: "Custom addresses",
-    text: "Pick a memorable prefix like your-name@abahi.tech instead of a random string — still fully disposable.",
+    text: "Pick a memorable prefix like your-name@tempmaill.tech instead of a random string — still fully disposable.",
   },
   {
     title: "Real-time inbox",

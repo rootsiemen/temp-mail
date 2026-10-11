@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { POSTS } from "@/lib/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://abahi.tech";
+  const base = "https://tempmaill.tech";
   const now = new Date();
 
   const staticPages = [

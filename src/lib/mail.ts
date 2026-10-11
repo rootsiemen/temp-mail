@@ -9,7 +9,7 @@ export interface TempEmail {
   preview?: string;
 }
 
-export const DOMAIN = "abahi.tech";
+export const DOMAIN = "tempmaill.tech";
 
 const ADJECTIVES = [
   "swift", "bright", "calm", "clever", "cozy", "daring", "eager", "fancy",

@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://abahi.tech/sitemap.xml",
+    sitemap: "https://tempmaill.tech/sitemap.xml",
   };
 }

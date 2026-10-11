@@ -38,7 +38,7 @@ export default {
     const recipient = message.to.trim().toLowerCase();
 
     // Safety: only handle our own domain.
-    if (!recipient.endsWith("@abahi.tech")) {
+    if (!recipient.endsWith("@tempmaill.tech")) {
       message.setReject("Address not served here.");
       return;
     }

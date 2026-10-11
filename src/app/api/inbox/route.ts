@@ -1,7 +1,7 @@
 import type { TempEmail } from "@/lib/mail";
 
 /**
- * GET /api/inbox?address=someone@abahi.tech
+ * GET /api/inbox?address=someone@tempmaill.tech
  * Reads the stored message list for an address from Cloudflare KV
  * via the KV REST API. Returns { emails: [] } gracefully when the
  * Cloudflare credentials are not configured or the key is missing.
@@ -12,7 +12,7 @@ export async function GET(request: Request) {
 
   if (!rawAddress || !/^[a-z0-9._-]+@abahi\.tech$/.test(rawAddress)) {
     return Response.json(
-      { emails: [], error: "A valid @abahi.tech address is required." },
+      { emails: [], error: "A valid @tempmaill.tech address is required." },
       { status: 400 }
     );
   }

@@ -1,7 +1,7 @@
 import type { TempEmail } from "@/lib/mail";
 
 /**
- * GET /api/email/:id?address=someone@abahi.tech
+ * GET /api/email/:id?address=someone@tempmaill.tech
  * Returns a single stored message by looking it up inside the
  * address's inbox list in Cloudflare KV.
  */
@@ -14,7 +14,7 @@ export async function GET(
   const rawAddress = (searchParams.get("address") || "").trim().toLowerCase();
 
   if (!id || !rawAddress || !/^[a-z0-9._-]+@abahi\.tech$/.test(rawAddress)) {
-    return Response.json({ error: "Valid id and @abahi.tech address required." }, { status: 400 });
+    return Response.json({ error: "Valid id and @tempmaill.tech address required." }, { status: 400 });
   }
 
   const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
