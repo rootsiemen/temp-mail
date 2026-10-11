@@ -37,8 +37,9 @@ export default {
   async email(message: ForwardableEmailMessage, env: Env): Promise<void> {
     const recipient = message.to.trim().toLowerCase();
 
-    // Safety: only handle our own domain.
-    if (!recipient.endsWith("@tempmaill.tech")) {
+    // Safety: only handle our own email domains.
+    const EMAIL_DOMAINS = ["@abahi.tech", "@abahi.page", "@abahi.me"];
+    if (!EMAIL_DOMAINS.some((d) => recipient.endsWith(d))) {
       message.setReject("Address not served here.");
       return;
     }

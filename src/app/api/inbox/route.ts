@@ -1,18 +1,26 @@
-import type { TempEmail } from "@/lib/mail";
+import { EMAIL_DOMAINS, type TempEmail } from "@/lib/mail";
 
 /**
- * GET /api/inbox?address=someone@tempmaill.tech
+ * GET /api/inbox?address=someone@abahi.tech
  * Reads the stored message list for an address from Cloudflare KV
  * via the KV REST API. Returns { emails: [] } gracefully when the
  * Cloudflare credentials are not configured or the key is missing.
  */
+const ADDRESS_RE = new RegExp(
+  `^[a-z0-9._-]+@(${EMAIL_DOMAINS.map((d) => d.replace(/\./g, "\\.")).join("|")})$`
+);
+
+export function isValidAddress(addr: string): boolean {
+  return ADDRESS_RE.test(addr);
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const rawAddress = (searchParams.get("address") || "").trim().toLowerCase();
 
-  if (!rawAddress || !/^[a-z0-9._-]+@abahi\.tech$/.test(rawAddress)) {
+  if (!rawAddress || !isValidAddress(rawAddress)) {
     return Response.json(
-      { emails: [], error: "A valid @tempmaill.tech address is required." },
+      { emails: [], error: `A valid address (${EMAIL_DOMAINS.map((d) => "@" + d).join(", ")}) is required.` },
       { status: 400 }
     );
   }

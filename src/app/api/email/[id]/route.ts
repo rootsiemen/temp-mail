@@ -1,7 +1,8 @@
-import type { TempEmail } from "@/lib/mail";
+import { EMAIL_DOMAINS, type TempEmail } from "@/lib/mail";
+import { isValidAddress } from "../../inbox/route";
 
 /**
- * GET /api/email/:id?address=someone@tempmaill.tech
+ * GET /api/email/:id?address=someone@abahi.tech
  * Returns a single stored message by looking it up inside the
  * address's inbox list in Cloudflare KV.
  */
@@ -13,8 +14,8 @@ export async function GET(
   const { searchParams } = new URL(request.url);
   const rawAddress = (searchParams.get("address") || "").trim().toLowerCase();
 
-  if (!id || !rawAddress || !/^[a-z0-9._-]+@abahi\.tech$/.test(rawAddress)) {
-    return Response.json({ error: "Valid id and @tempmaill.tech address required." }, { status: 400 });
+  if (!id || !rawAddress || !isValidAddress(rawAddress)) {
+    return Response.json({ error: `Valid id and address (${EMAIL_DOMAINS.map((d) => "@" + d).join(", ")}) required.` }, { status: 400 });
   }
 
   const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;

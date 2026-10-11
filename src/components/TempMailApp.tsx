@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  DOMAIN,
+  EMAIL_DOMAINS,
   randomPrefix,
   sanitizePrefix,
   timeAgo,
@@ -11,17 +11,19 @@ import {
 } from "@/lib/mail";
 
 const STORAGE_KEY = "abahi-temp-mail-address";
+const DOMAIN_KEY = "abahi-temp-mail-domain";
 const POLL_INTERVAL = 5000;
 
 export default function TempMailApp() {
   const [prefix, setPrefix] = useState("");
   const [draft, setDraft] = useState("");
+  const [domain, setDomain] = useState(EMAIL_DOMAINS[0]);
   const [emails, setEmails] = useState<TempEmail[]>([]);
   const [loading, setLoading] = useState(true);
   const [copied, setCopied] = useState(false);
   const [selected, setSelected] = useState<TempEmail | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const address = prefix ? `${prefix}@${DOMAIN}` : "";
+  const address = prefix ? `${prefix}@${domain}` : "";
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const fetchInbox = useCallback(async (addr: string) => {
@@ -40,7 +42,7 @@ export default function TempMailApp() {
   }, []);
 
   const applyPrefix = useCallback(
-    (p: string) => {
+    (p: string, d: string = domain) => {
       const clean = sanitizePrefix(p) || randomPrefix();
       setPrefix(clean);
       setDraft(clean);
@@ -49,22 +51,32 @@ export default function TempMailApp() {
       setSelected(null);
       try {
         localStorage.setItem(STORAGE_KEY, clean);
+        localStorage.setItem(DOMAIN_KEY, d);
       } catch {
         /* storage unavailable */
       }
-      fetchInbox(`${clean}@${DOMAIN}`);
+      fetchInbox(`${clean}@${d}`);
     },
-    [fetchInbox]
+    [fetchInbox, domain]
   );
+
+  const changeDomain = (d: string) => {
+    setDomain(d);
+    applyPrefix(prefix || randomPrefix(), d);
+  };
 
   useEffect(() => {
     let initial = "";
+    let savedDomain = EMAIL_DOMAINS[0];
     try {
       initial = localStorage.getItem(STORAGE_KEY) || "";
+      const sd = localStorage.getItem(DOMAIN_KEY) || "";
+      if (EMAIL_DOMAINS.includes(sd)) savedDomain = sd;
     } catch {
       /* storage unavailable */
     }
-    applyPrefix(initial || randomPrefix());
+    setDomain(savedDomain);
+    applyPrefix(initial || randomPrefix(), savedDomain);
 
     timer.current = setInterval(() => {
       const current = (() => {
@@ -74,7 +86,14 @@ export default function TempMailApp() {
           return "";
         }
       })();
-      if (current) fetchInbox(`${current}@${DOMAIN}`);
+      const curDomain = (() => {
+        try {
+          return localStorage.getItem(DOMAIN_KEY) || EMAIL_DOMAINS[0];
+        } catch {
+          return EMAIL_DOMAINS[0];
+        }
+      })();
+      if (current) fetchInbox(`${current}@${curDomain}`);
     }, POLL_INTERVAL);
 
     return () => {
@@ -152,7 +171,16 @@ export default function TempMailApp() {
                 aria-label="Custom email prefix"
                 className="w-full bg-transparent px-4 py-2.5 text-sm outline-none placeholder:text-slate-400"
               />
-              <span className="shrink-0 pr-4 text-sm text-slate-400">@{DOMAIN}</span>
+              <select
+                value={domain}
+                onChange={(e) => changeDomain(e.target.value)}
+                aria-label="Email domain"
+                className="shrink-0 cursor-pointer bg-transparent pr-4 text-sm font-semibold text-blue-700 outline-none"
+              >
+                {EMAIL_DOMAINS.map((d) => (
+                  <option key={d} value={d}>@{d}</option>
+                ))}
+              </select>
             </div>
             <div className="flex gap-2">
               <button
