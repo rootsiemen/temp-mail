@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "FAQ — Temporary Email Questions Answered",
   description:
-    "Frequently asked questions about Abahi Temp Mail: how temporary email works, how long messages are kept, whether it is free, and more.",
+    "Frequently asked questions about Temp Mail: how temporary email works, how long messages are kept, whether it is free, and more.",
   alternates: { canonical: "https://tempmaill.tech/faq" },
 };
 
@@ -14,7 +14,7 @@ const FAQS: { q: string; a: string }[] = [
     a: "It is a real, working email address that exists for a short time. You can receive verification codes, confirmation links, and one-time passwords with it — but it is not tied to your identity, and everything in it is deleted automatically after one hour.",
   },
   {
-    q: "Is Abahi Temp Mail really free?",
+    q: "Is Temp Mail really free?",
     a: "Yes — completely free, with no accounts, subscriptions, or hidden limits. You can create as many temporary addresses as you need.",
   },
   {

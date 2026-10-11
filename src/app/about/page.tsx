@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn what Abahi Temp Mail is, why we built a free temporary email service, and how we protect your privacy.",
+    "Learn what Temp Mail is, why we built a free temporary email service, and how we protect your privacy.",
   alternates: { canonical: "https://tempmaill.tech/about" },
 };
 
@@ -13,11 +13,11 @@ export default function AboutPage() {
     <div className="bg-white">
       <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-          About Abahi Temp Mail
+          About Temp Mail
         </h1>
         <div className="mt-6 space-y-5 text-sm leading-7 text-slate-600 sm:text-base">
           <p>
-            Abahi Temp Mail is a free temporary email service. It gives you a
+            Temp Mail is a free temporary email service. It gives you a
             real, working email address in one click — no signup, no personal
             details — so you can receive verification codes, confirmation
             links, and one-time passwords without exposing your real inbox.

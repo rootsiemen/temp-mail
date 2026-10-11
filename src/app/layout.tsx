@@ -10,13 +10,13 @@ const inter = Inter({
 });
 
 const SITE_URL = "https://tempmaill.tech";
-const SITE_NAME = "Abahi Temp Mail";
+const SITE_NAME = "Temp Mail";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Abahi Temp Mail — Free Temporary Disposable Email Address",
-    template: "%s | Abahi Temp Mail",
+    default: "Temp Mail — Free Temporary Disposable Email Address",
+    template: "%s | Temp Mail",
   },
   description:
     "Get a free temporary email address instantly at tempmaill.tech. Protect your real inbox from spam when signing up for websites, free trials, and downloads. No signup required — emails auto-delete after 1 hour.",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "free temp email",
     "anonymous email",
   ],
-  authors: [{ name: "Abahi" }],
+  authors: [{ name: "Temp Mail" }],
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Abahi Temp Mail — Free Temporary Disposable Email Address",
+    title: "Temp Mail — Free Temporary Disposable Email Address",
     description:
       "Instant disposable email addresses. Keep your real inbox clean — no signup, no spam, emails auto-delete after 1 hour.",
     url: SITE_URL,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abahi Temp Mail — Free Temporary Disposable Email Address",
+    title: "Temp Mail — Free Temporary Disposable Email Address",
     description:
       "Instant disposable email addresses. Keep your real inbox clean — no signup, no spam, emails auto-delete after 1 hour.",
   },

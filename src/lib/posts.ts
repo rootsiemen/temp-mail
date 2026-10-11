@@ -19,7 +19,7 @@ export const POSTS: BlogPost[] = [
       {
         paragraphs: [
           "A temporary email address — also called disposable email, throwaway email, or temp mail — is a real, functioning inbox with a deliberately short lifespan. You can receive verification codes, confirmation links, newsletters, and one-time passwords with it, exactly as you would with a normal address. The difference: it is not connected to your identity, and everything inside it is deleted automatically after a short period.",
-          "On Abahi Temp Mail, that period is one hour. Open the homepage, and an address like bright.fox412@tempmaill.tech is already waiting. Copy it, paste it into whatever form asked for your email, and watch messages arrive in real time. When you are done — or when the hour passes — it is gone as if it never existed.",
+          "On Temp Mail, that period is one hour. Open the homepage, and an address like bright.fox412@tempmaill.tech is already waiting. Copy it, paste it into whatever form asked for your email, and watch messages arrive in real time. When you are done — or when the hour passes — it is gone as if it never existed.",
         ],
       },
       {
@@ -39,7 +39,7 @@ export const POSTS: BlogPost[] = [
       {
         heading: "Is it safe?",
         paragraphs: [
-          "For receiving, yes — with normal email caution. Treat links and attachments in temp mail exactly as you would in your real inbox: do not click anything suspicious. Because Abahi Temp Mail asks for no personal details and deletes everything within an hour, there is very little at stake even if something odd arrives.",
+          "For receiving, yes — with normal email caution. Treat links and attachments in temp mail exactly as you would in your real inbox: do not click anything suspicious. Because Temp Mail asks for no personal details and deletes everything within an hour, there is very little at stake even if something odd arrives.",
           "One honest caveat: temporary addresses are public by nature. Anyone who guesses your address can read its inbox during that hour, so never receive anything sensitive — no financial documents, no personal IDs — through temp mail.",
         ],
       },
@@ -103,7 +103,7 @@ export const POSTS: BlogPost[] = [
       {
         heading: "A quick rule of thumb",
         paragraphs: [
-          "If you will need the account in a year, use your real email. If you need it for an afternoon, temp mail is the right tool. Abahi Temp Mail makes the second case instant: no signup, messages in seconds, everything gone within the hour.",
+          "If you will need the account in a year, use your real email. If you need it for an afternoon, temp mail is the right tool. Temp Mail makes the second case instant: no signup, messages in seconds, everything gone within the hour.",
         ],
       },
     ],
@@ -145,7 +145,7 @@ export const POSTS: BlogPost[] = [
       {
         heading: "The five-minute setup",
         paragraphs: [
-          "You do not need to overhaul anything. Next time a site asks for your email and your gut says 'I will never need this again,' open Abahi Temp Mail, copy the address, and move on. After a week of doing this instinctively, check your real inbox — the difference in noise is the entire argument.",
+          "You do not need to overhaul anything. Next time a site asks for your email and your gut says 'I will never need this again,' open Temp Mail, copy the address, and move on. After a week of doing this instinctively, check your real inbox — the difference in noise is the entire argument.",
         ],
       },
     ],

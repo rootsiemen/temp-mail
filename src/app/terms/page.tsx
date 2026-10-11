@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Abahi Temp Mail terms of service: acceptable use, limitations of temporary email, and service availability.",
+    "Temp Mail terms of service: acceptable use, limitations of temporary email, and service availability.",
   alternates: { canonical: "https://tempmaill.tech/terms" },
 };
 
@@ -11,7 +11,7 @@ const SECTIONS: { heading: string; body: string[] }[] = [
   {
     heading: "1. The service",
     body: [
-      "Abahi Temp Mail provides free, temporary, receive-only email addresses. Addresses and all messages in them are automatically deleted — messages after one hour. The service requires no account and is provided on an 'as is' basis.",
+      "Temp Mail provides free, temporary, receive-only email addresses. Addresses and all messages in them are automatically deleted — messages after one hour. The service requires no account and is provided on an 'as is' basis.",
     ],
   },
   {
@@ -36,7 +36,7 @@ const SECTIONS: { heading: string; body: string[] }[] = [
   {
     heading: "5. Limitation of liability",
     body: [
-      "To the maximum extent permitted by law, Abahi Temp Mail is not liable for any direct or indirect damages arising from your use of the service, including missed messages, deleted messages, or inability to access an address.",
+      "To the maximum extent permitted by law, Temp Mail is not liable for any direct or indirect damages arising from your use of the service, including missed messages, deleted messages, or inability to access an address.",
     ],
   },
   {

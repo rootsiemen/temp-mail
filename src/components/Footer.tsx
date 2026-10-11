@@ -46,7 +46,7 @@ export default function Footer() {
                 </svg>
               </span>
               <span className="text-lg font-bold tracking-tight text-slate-900">
-                Abahi <span className="text-blue-600">Temp Mail</span>
+                Temp <span className="text-blue-600">Temp Mail</span>
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-600">
@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 sm:flex-row">
           <p className="text-sm text-slate-500">
-            © 2026 Abahi Temp Mail. All rights reserved.
+            © 2026 Temp Mail. All rights reserved.
           </p>
           <p className="text-sm text-slate-500">
             Temporary emails are for receiving messages only — sending is not

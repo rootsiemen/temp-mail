@@ -3,7 +3,7 @@ import Link from "next/link";
 import TempMailApp from "@/components/TempMailApp";
 
 export const metadata: Metadata = {
-  title: "Abahi Temp Mail — Free Temporary Disposable Email Address",
+  title: "Temp Mail — Free Temporary Disposable Email Address",
   description:
     "Get a free temporary email address instantly. Use it for signups, trials, and downloads — keep your real inbox 100% spam-free. No signup required.",
   alternates: { canonical: "https://tempmaill.tech" },
@@ -111,7 +111,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
-              Why use Abahi Temp Mail?
+              Why use Temp Mail?
             </h2>
             <p className="mt-3 text-slate-600">
               A throwaway email is the simplest privacy tool you are not using
@@ -158,7 +158,7 @@ export default function Home() {
               confirmation links, and one-time passwords with it, exactly like
               a normal email address. The difference is that it is not tied to
               your identity, and everything in it is deleted automatically after
-              a short period (on Abahi Temp Mail, after one hour).
+              a short period (on Temp Mail, after one hour).
             </p>
             <p>
               Every day, websites ask for your email before letting you download
@@ -174,7 +174,7 @@ export default function Home() {
               follow-up marketing emails, downloading ebooks and whitepapers,
               testing your own website&apos;s signup flow as a developer,
               joining forums you will visit once, and grabbing discount codes
-              that require an email. Because Abahi Temp Mail needs no account
+              that require an email. Because Temp Mail needs no account
               and stores nothing beyond the one-hour window, it is also a
               practical step toward everyday online privacy.
             </p>
