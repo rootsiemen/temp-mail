@@ -46,7 +46,7 @@ export default function Footer() {
                 </svg>
               </span>
               <span className="text-lg font-bold tracking-tight text-slate-900">
-                Temp <span className="text-blue-600">Temp Mail</span>
+                Temp Mail
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-600">

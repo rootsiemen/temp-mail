@@ -32,7 +32,7 @@ export default function Header() {
             </svg>
           </span>
           <span className="text-lg font-bold tracking-tight text-slate-900">
-            Temp <span className="text-blue-600">Temp Mail</span>
+            Temp Mail
           </span>
         </Link>
 
