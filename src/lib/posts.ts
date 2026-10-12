@@ -19,7 +19,7 @@ export const POSTS: BlogPost[] = [
       {
         paragraphs: [
           "A temporary email address — also called disposable email, throwaway email, or temp mail — is a real, functioning inbox with a deliberately short lifespan. You can receive verification codes, confirmation links, newsletters, and one-time passwords with it, exactly as you would with a normal address. The difference: it is not connected to your identity, and everything inside it is deleted automatically after a short period.",
-          "On Temp Mail, that period is one hour. Open the homepage, and an address like bright.fox412@tempmaill.tech is already waiting. Copy it, paste it into whatever form asked for your email, and watch messages arrive in real time. When you are done — or when the hour passes — it is gone as if it never existed.",
+          "On Temp Mail, that period is one hour. Open the homepage, and an address like bright.fox412@abahi.tech is already waiting. Copy it, paste it into whatever form asked for your email, and watch messages arrive in real time. When you are done — or when the hour passes — it is gone as if it never existed.",
         ],
       },
       {
@@ -139,7 +139,7 @@ export const POSTS: BlogPost[] = [
         heading: "Common mistakes",
         paragraphs: [
           "The biggest mistake is using a temporary address for something you will need later — then losing access to password resets. The second is treating temp mail as secure storage: remember that anyone who guesses the address can read its inbox during its one-hour life, so nothing sensitive should ever pass through it.",
-          "A subtler mistake: reusing the same custom prefix everywhere. If bright.fox412@tempmaill.tech appears in ten breached databases, the addresses become correlatable. Let the random generator do its job, or vary your prefixes.",
+          "A subtler mistake: reusing the same custom prefix everywhere. If bright.fox412@abahi.tech appears in ten breached databases, the addresses become correlatable. Let the random generator do its job, or vary your prefixes.",
         ],
       },
       {

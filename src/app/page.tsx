@@ -31,7 +31,7 @@ const FEATURES = [
   },
   {
     title: "Custom addresses",
-    text: "Pick a memorable prefix like your-name@tempmaill.tech instead of a random string — still fully disposable.",
+    text: "Pick a memorable prefix like your-name@abahi.tech instead of a random string — still fully disposable.",
   },
   {
     title: "Real-time inbox",

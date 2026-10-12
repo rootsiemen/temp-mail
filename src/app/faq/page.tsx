@@ -23,7 +23,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can I choose my own address instead of a random one?",
-    a: "Yes. Type any prefix you like (letters, numbers, dots, dashes, underscores) in the box under your address and click 'Use this'. Your address becomes your-choice@tempmaill.tech.",
+    a: "Yes. Type any prefix you like (letters, numbers, dots, dashes, underscores) in the box under your address and click 'Use this'. Your address becomes your-choice@abahi.tech.",
   },
   {
     q: "How long are messages kept?",
@@ -51,9 +51,23 @@ const FAQS: { q: string; a: string }[] = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function FaqPage() {
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           Frequently asked questions
