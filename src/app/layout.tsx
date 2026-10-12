@@ -98,6 +98,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           content="WJfsQ2_qRNJmlkRiUTtLJ4SOtunciiV5nMdTX7ED86w"
         />
         <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9075805757065172"
+          crossOrigin="anonymous"
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
         />
