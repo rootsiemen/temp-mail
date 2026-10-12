@@ -93,6 +93,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <head>
+        <meta
+          name="google-site-verification"
+          content="WJfsQ2_qRNJmlkRiUTtLJ4SOtunciiV5nMdTX7ED86w"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
