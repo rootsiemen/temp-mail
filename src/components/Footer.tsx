@@ -23,13 +23,21 @@ const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
       { href: "/terms", label: "Terms of service" },
     ],
   },
+  {
+    title: "Our Sites",
+    links: [
+      { href: "https://games.tempmaill.tech", label: "PlayZone — free online games" },
+      { href: "https://frinjo.me", label: "Frinjo — web development" },
+      { href: "https://tarm.tech", label: "WebStore Dev — web development" },
+    ],
+  },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2.5">
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-blue-600 text-white">
@@ -62,16 +70,29 @@ export default function Footer() {
                 {col.title}
               </h3>
               <ul className="mt-4 space-y-2.5">
-                {col.links.map((link) => (
-                  <li key={link.href + link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-slate-600 transition hover:text-blue-600"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {col.links.map((link) =>
+                  link.href.startsWith("http") ? (
+                    <li key={link.href + link.label}>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener"
+                        className="text-sm text-slate-600 transition hover:text-blue-600"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ) : (
+                    <li key={link.href + link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-slate-600 transition hover:text-blue-600"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  )
+                )}
               </ul>
             </nav>
           ))}
