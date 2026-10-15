@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
-import { POSTS } from "@/lib/posts";
+import { getAllPosts } from "@/lib/blog-store";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = "https://tempmaill.tech";
   const now = new Date();
+  const posts = await getAllPosts();
 
   const staticPages = [
     { path: "", priority: 1.0, changeFrequency: "daily" as const },
@@ -21,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: p.changeFrequency,
       priority: p.priority,
     })),
-    ...POSTS.map((post) => ({
+    ...posts.map((post) => ({
       url: `${base}/blog/${post.slug}`,
       lastModified: new Date(post.date + "T00:00:00"),
       changeFrequency: "monthly" as const,

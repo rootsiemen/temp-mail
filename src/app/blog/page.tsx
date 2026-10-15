@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { POSTS, formatPostDate } from "@/lib/posts";
+import { getAllPosts } from "@/lib/blog-store";
+import { formatPostDate } from "@/lib/posts";
+
 
 export const metadata: Metadata = {
   title: "Blog — Email Privacy Guides",
@@ -9,7 +11,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://tempmaill.tech/blog" },
 };
 
-export default function BlogIndexPage() {
+export default async function BlogIndexPage() {
+  const posts = await getAllPosts();
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
@@ -22,7 +25,7 @@ export default function BlogIndexPage() {
         </p>
 
         <div className="mt-10 grid gap-6">
-          {POSTS.map((post) => (
+          {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
