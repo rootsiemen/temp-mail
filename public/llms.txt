@@ -1,0 +1,30 @@
+# Temp Mail
+
+> Free temporary disposable email addresses. Instant inbox, no signup required — emails auto-delete after 1 hour.
+
+Temp Mail (https://tempmaill.tech) is a free disposable email service. Users get an instant temporary email address to receive verification codes and signups without exposing their real inbox. No account, no personal data stored.
+
+## Pages
+
+- [Home — Free Temporary Disposable Email Address](https://tempmaill.tech/)
+- [About Us](https://tempmaill.tech/about)
+- [FAQ — Temporary Email Questions Answered](https://tempmaill.tech/faq)
+- [Blog — Email Privacy Guides](https://tempmaill.tech/blog)
+- [Privacy Policy](https://tempmaill.tech/privacy)
+- [Terms of Service](https://tempmaill.tech/terms)
+
+## Blog articles
+
+- [What Is a Temporary Email — and Why Should You Use One?](https://tempmaill.tech/blog/what-is-temporary-email)
+- [Is Temp Mail Legal? What the Rules Actually Say](https://tempmaill.tech/blog/is-temp-mail-legal)
+- [Gmail Aliases vs. Temp Mail: Which One Actually Protects Your Privacy?](https://tempmaill.tech/blog/gmail-aliases-vs-temp-mail)
+- [7 Smart Ways to Use Disposable Email Addresses](https://tempmaill.tech/blog/smart-ways-to-use-disposable-email)
+- [Temporary Email vs. Your Real Inbox: A Practical Privacy Guide](https://tempmaill.tech/blog/temporary-email-vs-real-inbox-privacy)
+
+## Key facts
+
+- Service: free temporary/disposable email inbox
+- Signup: none required
+- Email retention: auto-deleted after 1 hour
+- Use cases: verification codes, trial signups, spam avoidance, privacy protection
+- Contact: via the Contact page on the site
