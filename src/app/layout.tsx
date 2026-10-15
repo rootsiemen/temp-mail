@@ -67,11 +67,15 @@ export const metadata: Metadata = {
 
 const webAppSchema = {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
+  "@type": "Service",
   name: "Temp Mail",
   url: SITE_URL,
-  applicationCategory: "CommunicationApplication",
-  operatingSystem: "Any",
+  serviceType: "Temporary Email Service",
+  provider: {
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+  },
   offers: {
     "@type": "Offer",
     price: "0",
@@ -79,6 +83,21 @@ const webAppSchema = {
   },
   description:
     "Free temporary disposable email addresses. Instant inbox, no signup required — emails auto-delete after 1 hour.",
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 const organizationSchema = {
@@ -109,6 +128,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900">
