@@ -3,10 +3,58 @@ import Link from "next/link";
 import TempMailApp from "@/components/TempMailApp";
 
 export const metadata: Metadata = {
-  title: "Temp Mail — Free Temporary Disposable Email Address",
+  title: "Free Temporary Email — Instant Disposable Temp Mail (No Signup)",
   description:
     "Get a free temporary email address instantly. Use it for signups, trials, and downloads — keep your real inbox 100% spam-free. No signup required.",
   alternates: { canonical: "https://tempmaill.tech" },
+};
+
+const HOME_FAQS: { q: string; a: string }[] = [
+  {
+    q: "Is Temp Mail really free?",
+    a: "Yes — 100% free, with no accounts, subscriptions, or hidden limits. Create as many temporary email addresses as you need.",
+  },
+  {
+    q: "Do I need to sign up?",
+    a: "No. Your disposable address is generated instantly when you open the page. We never ask for your name, phone number, or real email address.",
+  },
+  {
+    q: "How long do emails last?",
+    a: "Every message is permanently deleted one hour after it arrives. You can also discard your address anytime to get a fresh one.",
+  },
+  {
+    q: "Which domains can I use?",
+    a: "Addresses come on @abahi.tech, @abahi.page, and @abahi.me — and you can set a custom prefix like your-name@abahi.tech.",
+  },
+  {
+    q: "Is it safe to use temp mail?",
+    a: "Yes. We collect no personal details, messages auto-delete after one hour, and we never sell data. Still, avoid suspicious links and never use a temporary address for banking or accounts you need long-term access to.",
+  },
+];
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOME_FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Temp Mail",
+  url: "https://tempmaill.tech",
+  applicationCategory: "UtilitiesApplication",
+  operatingSystem: "Any (Web)",
+  browserRequirements: "Requires JavaScript",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  description:
+    "Free temporary disposable email addresses. Instant inbox, no signup required — emails auto-delete after 1 hour. Use for OTP codes, signups, trials, and spam-free registration.",
+  featureList:
+    "Instant disposable inbox, custom address prefix, real-time email refresh, auto-delete after 1 hour, no signup, no personal data collected",
 };
 
 const STEPS = [
@@ -200,6 +248,63 @@ export default function Home() {
               Privacy guides
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Homepage FAQ */}
+      <section className="bg-slate-50">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+        />
+        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+          <div className="text-center">
+            <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
+              Temporary email FAQs
+            </h2>
+            <p className="mt-3 text-slate-600">
+              Quick answers about free disposable email addresses.
+            </p>
+          </div>
+          <div className="mt-10 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+            {HOME_FAQS.map((f) => (
+              <details
+                key={f.q}
+                className="group px-6 py-5 open:bg-slate-50"
+              >
+                <summary className="cursor-pointer list-none text-base font-semibold text-slate-900 marker:hidden [&::-webkit-details-marker]:hidden">
+                  <span className="flex items-center justify-between gap-4">
+                    {f.q}
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      className="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180"
+                      aria-hidden="true"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{f.a}</p>
+              </details>
+            ))}
+          </div>
+          <p className="mt-6 text-center text-sm text-slate-600">
+            Still curious?{" "}
+            <Link
+              href="/faq"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              Read the full FAQ
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>
