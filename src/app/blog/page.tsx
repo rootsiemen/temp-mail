@@ -7,7 +7,7 @@ import { formatPostDate } from "@/lib/posts";
 export const metadata: Metadata = {
   title: "Blog — Email Privacy Guides",
   description:
-    "Practical guides on temporary email, disposable addresses, and keeping your real inbox spam-free.",
+    "Practical guides on temporary email, disposable addresses, online privacy, and keeping your real inbox completely spam-free.",
   alternates: { canonical: "https://tempmaill.tech/blog" },
 };
 

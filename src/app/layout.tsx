@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Temp Mail",
   },
   description:
-    "Get a free temporary email address instantly at tempmaill.tech. Protect your real inbox from spam when signing up for websites, free trials, and downloads. No signup required — emails auto-delete after 1 hour.",
+    "Free temporary email addresses at tempmaill.tech. Protect your inbox from spam — no signup required, emails auto-delete after 1 hour.",
   keywords: [
     "temp mail",
     "temporary email",
@@ -46,12 +46,21 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Temp Mail — Free Temporary Disposable Email Address",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Temp Mail — Free Temporary Disposable Email Address",
     description:
       "Instant disposable email addresses. Keep your real inbox clean — no signup, no spam, emails auto-delete after 1 hour.",
+    images: [`${SITE_URL}/og-image.png`],
   },
   robots: {
     index: true,

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Temp Mail terms of service: acceptable use, limitations of temporary email, and service availability.",
+    "Temp Mail terms of service: acceptable use policy, limitations of temporary email addresses, service availability, and user responsibilities explained clearly.",
   alternates: { canonical: "https://tempmaill.tech/terms" },
 };
 

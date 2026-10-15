@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn what Temp Mail is, why we built a free temporary email service, and how we protect your privacy.",
+    "Learn what Temp Mail is, why we built this free temporary email service, how disposable addresses work, and how we protect your privacy.",
   alternates: { canonical: "https://tempmaill.tech/about" },
 };
 

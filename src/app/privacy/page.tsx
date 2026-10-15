@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Temp Mail privacy policy: what data we collect (almost none), how long messages are kept (1 hour), and your rights.",
+    "Temp Mail privacy policy: what data we collect (almost none), how long your messages are kept (1 hour max), your rights, and how we handle your information.",
   alternates: { canonical: "https://tempmaill.tech/privacy" },
 };
 

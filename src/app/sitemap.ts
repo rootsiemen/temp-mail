@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog-store";
-
+import { cacheLife } from "next/cache";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  "use cache";
+  cacheLife("hours");
   const base = "https://tempmaill.tech";
   const now = new Date();
   const posts = await getAllPosts();
