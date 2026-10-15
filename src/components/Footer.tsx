@@ -102,6 +102,20 @@ export default function Footer() {
           <p className="text-sm text-slate-500">
             © 2026 Temp Mail. All rights reserved.
           </p>
+          <a
+            href="https://dododirectory.com"
+            target="_blank"
+            rel="dofollow"
+            title="Featured on DodoDirectory"
+          >
+            <img
+              src="https://dododirectory.com/badge-light.png"
+              alt="Featured on DodoDirectory"
+              width="120"
+              height="32"
+              loading="lazy"
+            />
+          </a>
           <p className="text-sm text-slate-500">
             Temporary emails are for receiving messages only — sending is not
             supported.
