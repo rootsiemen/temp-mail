@@ -46,8 +46,48 @@ const FAQS: { q: string; a: string }[] = [
     a: "Most sites that simply need to send you a code or link work fine. A small number of services block known disposable domains; if a signup rejects your address, that is the site's policy, not a malfunction.",
   },
   {
+    q: "Which email domains can I use?",
+    a: "You can get addresses on @abahi.tech, @abahi.page, and @abahi.me — and set a custom prefix like your-name@abahi.tech.",
+  },
+  {
     q: "Is it safe to click links in received emails?",
     a: "Treat them like any email: be cautious. We sandbox HTML content in your browser, but you should still avoid suspicious links and never download unexpected attachments.",
+  },
+  {
+    q: "Why didn't my email arrive?",
+    a: "First, wait about 60 seconds — some senders queue mail before delivering it. Your inbox refreshes automatically every 5 seconds, so there is no need to reload. If nothing appears, check that you copied the full address correctly, and note that a few services block disposable domains. Trying a different domain (@abahi.tech, @abahi.page, or @abahi.me) often fixes it.",
+  },
+  {
+    q: "Is using temporary email legal?",
+    a: "Yes. Disposable email is a legitimate privacy tool used by millions of people and by developers testing their own software. What is not allowed is using it to commit fraud, impersonate others, or evade the law — our Terms of Use prohibit abuse, and we cooperate with lawful requests.",
+  },
+  {
+    q: "Can I reuse the same address later?",
+    a: "As long as you keep the browser tab open, your address keeps working and receiving new mail. But once you click Delete — or clear your browser data — the address is gone forever and cannot be recovered. For anything you might need again tomorrow, use your real email.",
+  },
+  {
+    q: "Can I download attachments from received emails?",
+    a: "Attachments sent to your temporary address are shown in the message view where the sender included them. For your own safety, only open files you were expecting, and never run unexpected executables — the same caution you would use with any email account.",
+  },
+  {
+    q: "Can I use Temp Mail on my phone?",
+    a: "Yes. The site works fully in any modern mobile browser — no app to install, no account needed. Open tempmaill.tech, copy your address, and switch back to the signup form. Your inbox keeps refreshing in the background tab.",
+  },
+  {
+    q: "Can I forward messages to my real inbox?",
+    a: "No. Temporary addresses are receive-only and have no forwarding, precisely so your real address stays disconnected from the disposable one. If a message contains something you want to keep, copy its contents before the one-hour deletion window expires.",
+  },
+  {
+    q: "Do you read the emails I receive?",
+    a: "No. Messages are processed automatically so they can be displayed in your inbox, and no human reads them. Everything is permanently deleted one hour after arrival, and we collect no personal data that could link an address to you.",
+  },
+  {
+    q: "What happens when the hour is up?",
+    a: "Each message is deleted exactly one hour after it arrives — permanently, with no trash folder and no recovery. Your address itself keeps working for new incoming mail until you discard it. Think of the inbox as a conveyor belt: new mail arrives, old mail drops off.",
+  },
+  {
+    q: "Can I get a notification when new mail arrives?",
+    a: "Your inbox checks for new messages automatically every 5 seconds while the tab is open, so new mail appears on its own. Keep the tab open during signups and you will see verification codes arrive in near real time — no manual refresh needed.",
   },
 ];
 
