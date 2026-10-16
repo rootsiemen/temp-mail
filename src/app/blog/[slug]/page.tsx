@@ -1,8 +1,29 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog-store";
 import { formatPostDate } from "@/lib/posts";
+
+/** Render [label](/path) inline links inside paragraph text. */
+function renderInline(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!m) return <Fragment key={i}>{part}</Fragment>;
+    const [, label, href] = m;
+    const cls = "font-semibold text-blue-600 hover:underline";
+    return href.startsWith("/") ? (
+      <Link key={i} href={href} className={cls}>
+        {label}
+      </Link>
+    ) : (
+      <a key={i} href={href} className={cls}>
+        {label}
+      </a>
+    );
+  });
+}
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
@@ -17,7 +38,8 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
-  const title = post.title.length > 60 ? post.title.slice(0, 57).trimEnd() + "..." : post.title;
+  // Template appends " | Temp Mail" (12 chars), so keep base title ≤ 48 chars
+  const title = post.title.length > 48 ? post.title.slice(0, 45).trimEnd() + "..." : post.title;
   let description = (post.excerpt || "").replace(/\s+/g, " ").trim();
   if (description.length > 160) description = description.slice(0, 157).trimEnd() + "...";
   const url = `https://tempmaill.tech/blog/${post.slug}`;
@@ -54,52 +76,8 @@ export default async function BlogPostPage({
 
   const others = (await getAllPosts()).filter((p) => p.slug !== post.slug);
 
-  const postUrl = `https://tempmaill.tech/blog/${post.slug}`;
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.excerpt,
-    url: postUrl,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      "@type": "Organization",
-      name: "Temp Mail",
-      url: "https://tempmaill.tech",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Temp Mail",
-      url: "https://tempmaill.tech",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://tempmaill.tech/logo.png",
-      },
-    },
-    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
-    image: "https://tempmaill.tech/og-image.png",
-  };
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://tempmaill.tech" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://tempmaill.tech/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
-    ],
-  };
-
   return (
     <div className="bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <Link
           href="/blog"
@@ -140,7 +118,7 @@ export default async function BlogPostPage({
                   key={j}
                   className="mt-4 text-sm leading-7 text-slate-600 sm:text-base"
                 >
-                  {p}
+                  {renderInline(p)}
                 </p>
               ))}
             </section>

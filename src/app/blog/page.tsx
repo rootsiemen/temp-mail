@@ -13,54 +13,57 @@ export const metadata: Metadata = {
 
 export default async function BlogIndexPage() {
   const posts = await getAllPosts();
-
-  const blogSchema = {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    name: "Temp Mail Blog — Email Privacy Guides",
-    url: "https://tempmaill.tech/blog",
-    description:
-      "Practical guides on temporary email, disposable addresses, and everyday online privacy.",
-    blogPost: posts.map((p) => ({
-      "@type": "BlogPosting",
-      headline: p.title,
-      description: p.excerpt,
-      url: `https://tempmaill.tech/blog/${p.slug}`,
-      datePublished: p.date,
-      author: {
-        "@type": "Organization",
-        name: "Temp Mail",
-        url: "https://tempmaill.tech",
-      },
-    })),
-  };
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://tempmaill.tech" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://tempmaill.tech/blog" },
-    ],
-  };
-
   return (
     <div className="bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-          Blog
+          The Temp Mail Blog
         </h1>
-        <p className="mt-3 text-slate-600">
-          Practical guides on temporary email, disposable addresses, and
-          everyday online privacy.
-        </p>
+        <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600 sm:text-base">
+          <p>
+            Disposable email is a small tool with an outsized impact on your
+            privacy — but only if you use it well. The Temp Mail Blog is where
+            we explain how it all works: what temporary email is and how the
+            technology behind it functions, the smartest everyday situations
+            for a throwaway address, and the honest limits you need to know
+            about (OTP codes, account recovery, and platform blocklists).
+          </p>
+          <p>
+            You will find practical privacy strategy here, not just product
+            tips. Our guides cover building a tiered inbox system so one-off
+            signups never pollute your real address, how Gmail aliases compare
+            against true disposable inboxes, where the legal lines sit, and
+            side-by-side comparisons of the best temporary email services in
+            2026. Every article is written to answer one question completely —
+            whether that is how to sign up for Facebook with a disposable
+            address, or whether a temp inbox is safe for verification codes.
+          </p>
+          <p>
+            New to the topic? Start with{" "}
+            <Link
+              href="/blog/what-is-temporary-email"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              what a temporary email is
+            </Link>
+            , then pick up{" "}
+            <Link
+              href="/blog/smart-ways-to-use-disposable-email"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              seven practical ways to use one
+            </Link>
+            . If privacy is the goal, the{" "}
+            <Link
+              href="/blog/temporary-email-vs-real-inbox-privacy"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              privacy guide
+            </Link>{" "}
+            shows how disposable addresses fit into a realistic setup. Browse
+            all articles below.
+          </p>
+        </div>
 
         <div className="mt-10 grid gap-6">
           {posts.map((post) => (
