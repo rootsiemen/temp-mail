@@ -54,8 +54,52 @@ export default async function BlogPostPage({
 
   const others = (await getAllPosts()).filter((p) => p.slug !== post.slug);
 
+  const postUrl = `https://tempmaill.tech/blog/${post.slug}`;
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    url: postUrl,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Temp Mail",
+      url: "https://tempmaill.tech",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Temp Mail",
+      url: "https://tempmaill.tech",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://tempmaill.tech/logo.png",
+      },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    image: "https://tempmaill.tech/og-image.png",
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://tempmaill.tech" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://tempmaill.tech/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+    ],
+  };
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <Link
           href="/blog"

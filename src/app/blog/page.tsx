@@ -13,8 +13,46 @@ export const metadata: Metadata = {
 
 export default async function BlogIndexPage() {
   const posts = await getAllPosts();
+
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Temp Mail Blog — Email Privacy Guides",
+    url: "https://tempmaill.tech/blog",
+    description:
+      "Practical guides on temporary email, disposable addresses, and everyday online privacy.",
+    blogPost: posts.map((p) => ({
+      "@type": "BlogPosting",
+      headline: p.title,
+      description: p.excerpt,
+      url: `https://tempmaill.tech/blog/${p.slug}`,
+      datePublished: p.date,
+      author: {
+        "@type": "Organization",
+        name: "Temp Mail",
+        url: "https://tempmaill.tech",
+      },
+    })),
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://tempmaill.tech" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://tempmaill.tech/blog" },
+    ],
+  };
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           Blog
