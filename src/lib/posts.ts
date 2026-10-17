@@ -917,6 +917,80 @@ export const POSTS: BlogPost[] = [
       }
     ],
   },
+  {
+      slug: "burner-email-vs-temp-mail",
+      title: "Burner Email vs Temp Mail: Which One Wins in 2026?",
+      excerpt: "Burner email vs temp mail: forwarding aliases like SimpleLogin and Firefox Relay compared against true disposable inboxes — privacy, OTP support, and cost.",
+      date: "2026-10-17",
+      readMinutes: 9,
+      content: [
+        {
+                paragraphs: [
+                  "Search for burner email vs temp mail and you will find people using the two terms as if they mean the same thing. They do not — not even close. A burner email is a forwarding alias: it looks like a separate address, but every message it receives is forwarded straight into your real inbox. A temp mail address is a standalone, self-destructing inbox with no real address behind it at all. Same use case on the surface — keeping your real email address out of strangers' databases — but completely different machinery underneath, and that difference decides which one you should reach for.",
+                  "This matters because picking the wrong one costs you in exactly the ways you were trying to avoid. Use a burner alias where a true throwaway belonged, and your real inbox still collects the spam you thought you dodged. Use temp mail where a persistent alias belonged, and you get locked out of an account when its password-reset email arrives an hour after the inbox died. The average internet user now juggles well over 100 online accounts, so this is not an edge-case decision — it is one you make constantly, usually without thinking. Here is the full breakdown, so you can think it through once and then stop worrying about it.",
+                ],
+              },
+        {
+                heading: "Burner email vs temp mail: the one-line difference",
+                paragraphs: [
+                  "Here is the cleanest way to keep them apart. Burner email services — SimpleLogin, addy.io, Firefox Relay, Apple Hide My Email, DuckDuckGo Email Protection — give you alias addresses that forward to your real inbox. When a store emails alias-7f3k@relay.firefox.com, the message lands in your Gmail or Proton Mail a second later, looking like any other email. You can reply through the alias, block the alias, or delete it — but the mailbox behind it is yours, permanent and searchable.",
+                  "Temp mail services — Temp Mail, Guerrilla Mail, 10MinuteMail — give you a real inbox that exists nowhere near your identity. There is no forwarding, no account, no password. You open the site, an address like bright.fox412@abahi.tech appears, messages arrive for about an hour, and then the whole thing — address and contents — is wiped automatically. Nothing lands anywhere else because there is nowhere else for it to land.",
+                  "Think of it as renting a PO box versus borrowing a friend's mailbox. The PO box (burner alias) redirects everything to your house; you keep the mail forever. The borrowed mailbox (temp mail) gets demolished at the end of the hour, and anything inside goes with it.",
+                ],
+              },
+        {
+                heading: "How forwarding aliases actually work",
+                paragraphs: [
+                  "The mechanics are straightforward. You create an alias — say, netflix-2026@aleeas.com — and hand it to whatever site asks for your email. The alias provider's servers receive the message, look up which real inbox that alias belongs to, and forward it there, usually within seconds. When you reply, the service rewrites the headers so your response appears to come from the alias. The site never learns your real address; your real inbox still gets everything, quietly and reliably.",
+                  "The control this gives you is the entire point of the category. One alias per site means each sender is isolated behind its own identifier. If a retailer starts spamming you, you disable or delete that single alias — the retailer's mail bounces, and every other alias keeps working. You can also see exactly who leaked your address: if spam arrives at your netflix-2026 alias, you know Netflix (or one of its partners) was the source. That forensic power is something temp mail can never give you, because temp mail addresses are too short-lived to develop a history.",
+                  "Burner alias services come in two tiers. Free plans are generous but bounded: Firefox Relay's free tier gives you 5 masks, addy.io's free plan offers unlimited standard aliases but caps forwarded bandwidth at 500 MB per month, and SimpleLogin's free tier covers unlimited aliases for personal use. Paid upgrades — SimpleLogin Premium around $30 a year, Firefox Relay Premium about $0.99 a month, Apple Hide My Email bundled with iCloud+ from $0.99 a month — add custom domains, catch-all subdomains, unlimited masks, and multiple destination mailboxes. Plans shift regularly, so treat these as today's numbers and check before paying.",
+                ],
+              },
+        {
+                heading: "Head to head: six differences that actually matter",
+                paragraphs: [
+                  "First, where the mail lands. Burner aliases forward into your real inbox, which means every message is searchable, archived, and protected by your provider's spam filters and security. Temp mail keeps mail quarantined in a separate, temporary inbox that auto-deletes — perfect isolation, zero history. If you might ever need to find that email again in six months, forwarding wins by a mile.",
+                  "Second, account recovery. Aliases persist as long as you keep them — months, years — so a password-reset email sent next spring still reaches you. Temp mail dies on a timer: one hour on Temp Mail and Guerrilla Mail, ten minutes on 10MinuteMail (extendable), and session-length on some others. If there is any chance you will need to recover this account, temp mail is the wrong tool. This is the single most common way people get burned, and our [OTP safety guide](/blog/is-temp-mail-safe-for-otp) covers the fallout in detail.",
+                  "Third, signup friction. Temp mail requires nothing — no account, no password, no identity of any kind. You open the page and you have an address. Every burner-alias service requires an account with the provider: SimpleLogin, Relay, and addy.io all know who you are, even if the websites you use your aliases on do not. That is not a flaw — it is the architecture — but it means burner email protects you from third parties, while temp mail also protects you from the service itself. SimpleLogin has been owned by Proton since 2022, which is about as trustworthy an owner as this industry offers, but the account still exists.",
+                  "Fourth, platform blocklists. Some websites refuse registrations from known disposable domains, and this is where the two categories diverge sharply. Temp mail domains are public, shared, and widely catalogued — blocklists know them. Burner aliases forward from domains like relay.firefox.com or aleeas.com that belong to established, reputable services and are rarely blocked. If a signup rejects your temp address, a burner alias is often the workaround that gets you through.",
+                  "Fifth, reply capability. Burner aliases let you reply and the recipient sees the alias, so two-way conversations work normally. Temp mail is receive-only by design — there is no sending, because a sending address would need authentication that a disposable session cannot provide. If the interaction might require you to write back, temp mail is disqualified.",
+                  "Sixth, the tracker question. DuckDuckGo's Email Protection strips trackers from forwarded mail before it reaches you, and Proton's infrastructure encrypts alias traffic end to end when both ends are inside its ecosystem. Temp mail sidesteps trackers entirely — a pixel beacon embedded in an email cannot build a profile on you when the address holding it ceases to exist within the hour. Different routes, similar destination.",
+                ],
+              },
+        {
+                heading: "When burner email (forwarding aliases) is the better pick",
+                paragraphs: [
+                  "Reach for a burner alias whenever the relationship might last. Online shopping accounts are the textbook case: you want order confirmations, shipping updates, and return labels arriving reliably for weeks, but you do not want the retailer's marketing team emailing you forever. One alias per store gives you full functionality plus a kill switch. If the store gets breached — and retail breaches happen constantly — the leaked address is an alias you can delete, not your real inbox.",
+                  "Newsletters you might actually read, forum accounts where your reputation accrues, free-tier SaaS tools you use weekly, gaming accounts, loyalty programs: anything where you need to log back in next month. The alias behaves exactly like a real address from the site's perspective, so nothing about verification, recovery, or ongoing communication breaks. Our [practical privacy guide](/blog/temporary-email-vs-real-inbox-privacy) calls this the middle tier of a healthy inbox strategy, and it is where most of your daily signups belong.",
+                  "Burner aliases are also the right answer when a site blocks disposable domains outright. Instead of hunting for an unblocked temp service, generate an alias — the relay domain passes the site's checks, and you still keep your real address private. This trick alone resolves most 'this email provider is not allowed' rejections.",
+                ],
+              },
+        {
+                heading: "When true temp mail wins",
+                paragraphs: [
+                  "Temp mail wins everywhere the interaction is genuinely one-and-done. Downloading an ebook behind an email gate, grabbing a discount code, joining a Wi-Fi portal at a café, entering a contest, reading one article behind a soft paywall, testing a signup flow as a developer — in every one of these, you need a working inbox for about five minutes and you will never think about that site again. A burner alias would technically work, but it leaves a permanent forwarding rule in your real inbox for a relationship that ended before it began. Temp mail leaves nothing.",
+                  "Speed is the other advantage. No account, no alias management dashboard, no deciding what to name the alias — open the page, copy the address, done. For developers running through QA cycles, that zero-friction loop matters: generate an address, trigger the verification email, read the code, move on. We collected [seven everyday situations](/blog/smart-ways-to-use-disposable-email) where this throwaway pattern saves your real inbox from slow decay.",
+                  "And for pure anonymity, temp mail is unmatched. No provider account means no billing record, no login trail, no recovery email pointing back at you. If the goal is a signup that cannot be traced to a person at all — an anonymous survey, a whistleblower tip line, a throwaway forum account — a forwarding alias, which sits on top of your identified account with the provider, is not actually anonymous. Temp mail is.",
+                ],
+              },
+        {
+                heading: "The smart play: use both in a three-tier system",
+                paragraphs: [
+                  "The burner email vs temp mail debate has a boring but correct answer: they are not competitors, they are different tiers of the same system. The setup that actually works long-term has three levels, and it takes about an hour to build. Tier one is your real address — reserved for banking, government services, work, and the handful of accounts where identity verification matters. Fewer than twenty senders should ever see this address.",
+                  "Tier two is burner aliases — one per persistent account. Shopping, streaming, forums, newsletters, apps. Each gets its own alias from SimpleLogin, Relay, or addy.io, so every sender is isolated and every leak is traceable and killable. This tier does the heavy lifting: it absorbs the hundreds of signups that would otherwise rot your real inbox.",
+                  "Tier three is temp mail — the disposable layer for everything one-off. Ebook gates, discount codes, Wi-Fi portals, contest entries, quick tests. Open Temp Mail, use the address, let it self-destruct. Nothing to manage, nothing to clean up later. The three tiers together mean your real address stays pristine, your persistent accounts stay recoverable, and your throwaway signups stay truly throwaway.",
+                ],
+              },
+        {
+                heading: "Burner email vs temp mail: the final score",
+                paragraphs: [
+                  "If you need one rule of thumb: ask whether you will ever need to hear from this sender again. Yes — use a burner alias, because recovery and reply matter more than perfect ephemerality. No — use temp mail, because a permanent forwarding rule for a five-minute interaction is clutter you will never clean up. It really is that simple, and getting it right is the difference between a privacy system that runs itself and one that quietly rots.",
+                  "On privacy purism, temp mail takes the round — no account, no trail, total erasure. On practicality for real life, burner aliases take it — recovery, replies, and searchability are features most people cannot live without. On cost, both are free for ordinary use, with burner services charging only for power-user features like custom domains. Neither replaces the other, and neither replaces the basic discipline of never handing your real address to a stranger.",
+                  "Start today with the easy win: generate your next throwaway signup on Temp Mail instead of typing your real address, and set up one burner alias for the next store that asks you to 'create an account' just to check out. Two habits, five minutes, and your inbox starts getting quieter this week.",
+                ],
+              },
+      ],
+    },
 ];
 export function getPost(slug: string): BlogPost | undefined {
   return POSTS.find((p) => p.slug === slug);
