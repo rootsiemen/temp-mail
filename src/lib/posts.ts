@@ -579,6 +579,50 @@ export const POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-stop-spam-emails-without-unsubscribing",
+    title: "How to Stop Spam Emails Without Unsubscribing",
+    excerpt:
+      "Unsubscribe links don't always work. Here's how to stop spam emails without unsubscribing \u2014 with disposable inboxes, better filters, and smarter signup habits.",
+    date: "2026-10-16",
+    readMinutes: 5,
+    content: [
+      {
+        paragraphs: [
+          "Hit 'unsubscribe' and the emails keep coming. Or worse \u2014 the link was fake, and clicking it just confirmed to the spammer that your address is real and watched. If that sounds familiar, here is how to stop spam emails without unsubscribing: cut off the supply of your address at the source, starve the senders who already have it, and build a setup where junk mail has nowhere to land. None of this needs an unsubscribe link to cooperate.",
+          "The shift is simple. Instead of asking senders to stop \u2014 and hoping they listen \u2014 you make your real address invisible to them in the first place. Here is the full playbook.",
+        ],
+      },
+      {
+        heading: "Why unsubscribing sometimes fails \u2014 or backfires",
+        paragraphs: [
+          "Legitimate newsletters honor unsubscribe requests \u2014 reputable senders must, under laws like CAN-SPAM in the US, GDPR in Europe, and PECR in the UK. But a large share of the junk in your inbox does not come from legitimate senders. It comes from marketers who bought your address from a data broker, scrapers who harvested it from a public profile, and outright spammers who have no 'remove me' list \u2014 only a list of live addresses.",
+          "That is why the unsubscribe link can backfire: it only works if the sender is honest. Clicking a link in a phishing or scam email is worse still \u2014 it confirms your address is active, flags you as a responsive target, and can deliver malware. The rule of thumb: only click unsubscribe on mail from companies you recognize and have done business with. For everything else, assume the link is a trap and move on.",
+        ],
+      },
+      {
+        heading: "How to stop spam emails without unsubscribing: cut off the supply",
+        paragraphs: [
+          "Every spam email you receive is the result of an earlier decision: you gave someone your address. The most reliable fix is to stop handing your real address to anyone who does not need it. Before you type it into a form, ask one question: will I need this address again tomorrow? If the answer is no \u2014 a discount code, an ebook download, a free trial, a forum account, a Wi-Fi portal login \u2014 use a disposable address instead.",
+          "Temporary email services exist exactly for this. Open Temp Mail and a working inbox is already waiting \u2014 no signup, no password \u2014 live for a full hour, which is plenty of time to receive any confirmation code or download link. Complete the signup, grab what you need, and let the address self-destruct. The marketer now holds an address that dies within the hour. There is nothing to unsubscribe from, because there is no inbox left to send to. Our [practical privacy guide](/blog/temporary-email-vs-real-inbox-privacy) and [seven smart use cases](/blog/smart-ways-to-use-disposable-email) show how far this one habit goes.",
+        ],
+      },
+      {
+        heading: "Contain the senders who already have your address",
+        paragraphs: [
+          "For senders already in your inbox, do not engage \u2014 contain them. Mark messages as spam or junk instead of replying or clicking; every major provider uses those reports to train filters that protect everyone. Then set up filters or rules that auto-archive mail from domains you never want to hear from, or containing common marketing phrases. Gmail, Outlook, and Apple Mail all support this, and it takes five minutes.",
+          "Also audit where your address is publicly visible. Search your name plus your email, check old forum profiles, business listings, and comment signatures you forgot about, and remove the address wherever it is exposed. Harvesters feed on exactly that. A surprising amount of spam traces back to an address left sitting on a public page years ago.",
+        ],
+      },
+      {
+        heading: "The one-hour rule for all future signups",
+        paragraphs: [
+          "Make it a habit: your real address is for people, your bank, your work, and services you genuinely want to hear from. Everything else gets a disposable address with a one-hour life. Once you internalize this split, the 'unsubscribe' problem quietly disappears \u2014 junk mail cannot pile up in an inbox you only loaned out for sixty minutes.",
+          "Start with the easiest win: the next site that demands your email before showing you anything \u2014 a 'free' tool, a coupon, a newsletter gate \u2014 do not hand it your real address. Open a temp inbox, finish the signup, and take what you came for. Your real inbox stays quiet, your address stays off the brokers' lists, and you never have to hunt for an unsubscribe link again.",
+        ],
+      },
+    ],
+  },
 ];
 export function getPost(slug: string): BlogPost | undefined {
   return POSTS.find((p) => p.slug === slug);
