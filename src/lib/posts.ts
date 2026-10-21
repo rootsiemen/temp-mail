@@ -1453,6 +1453,120 @@ export const POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "temp-mail-not-receiving-emails",
+    title: "Temp Mail Not Receiving Emails? 9 Fixes That Actually Work",
+    excerpt:
+      "Temp mail not receiving emails? Nine fixes for missing verification codes: blocked domains, greylisting delays, expired inboxes — diagnosed in minutes.",
+    date: "2026-10-20",
+    readMinutes: 9,
+    content: [
+      {
+        paragraphs: [
+          "You click 'send code', switch to your temp inbox, and… nothing. The spinner stops, the site insists the email was sent, and your temp mail is not receiving emails. Before you blame the inbox, know this: in nearly every case the inbox is fine. The email never left the sender, was refused at the door, or is sitting in a retry queue waiting out a spam filter's suspicion.",
+          "Temporary email inboxes are deliberately simple — they accept almost everything addressed to them. That simplicity makes them the most reliable part of the chain, and the least likely culprit. What follows is the diagnostic order that support teams and developers actually use: nine fixes, ordered from most common to least, that resolve the problem in minutes. Work them in order and you will know exactly where your email went.",
+        ],
+      },
+      {
+        heading: "Why temp mail not receiving emails is almost never a broken inbox",
+        paragraphs: [
+          "Start with the base rate. A temp inbox is a mailbox with one job: accept inbound mail and display it. There is no spam folder, no filter rules, no storage quota games, no forwarding chain to break. When the receiving side is this simple, failures cluster on the sending side — the site that claims it sent your email, and the anti-abuse systems standing between you and it.",
+          "Across support threads for disposable email services, the same distribution shows up again and again. Roughly four in ten 'missing email' reports trace to the site blocking the temp domain outright. Two in ten are timing — greylisting or sender queues that deliver minutes late. About one in ten is the user watching a different address than the one they typed into the form. The rest split between expired inboxes, browser or ad-blocker interference, and the sender never actually sending anything. The inbox being genuinely broken — the provider's mail servers down — accounts for a sliver so small it is the last thing to check, not the first.",
+          "That ordering matters because the instinctive fix — regenerate a new address and retry — is often the worst move. If the domain is blocklisted, the new address is blocked too, and you have spent your one retry on the same wall. Diagnose first, then act.",
+        ],
+      },
+      {
+        heading: "Fix 1: Confirm you are watching the right address",
+        paragraphs: [
+          "Temp inboxes regenerate. Open the service in two tabs, refresh one, and the tabs can hold two different addresses — each a valid inbox, but only one received your signup. Before anything else, copy the address from the inbox tab you are staring at and compare it, character by character, with what you entered on the site.",
+          "The failure mode is embarrassingly common: you generated an address, opened the signup in a new tab, regenerated 'just to be safe', and pasted the old address into the form — or the reverse. Every temp provider ties mail to the exact string, not to your browser session. A single transposed letter routes your code to someone else's throwaway inbox, where it sits unread until auto-deletion.",
+          "Lock it down: one tab, one address, copied with the copy button rather than highlight-drag (which clips trailing characters in some browsers). Then move to Fix 2.",
+        ],
+      },
+      {
+        heading: "Fix 2: Give it a full 60 seconds — greylisting delays are real",
+        paragraphs: [
+          "Email is not instant messaging. When a sender's server first contacts an unfamiliar receiving server, many receivers answer with a temporary refusal — SMTP code 4xx — that says 'try again later'. This is greylisting, and it exists to waste spammers' time: legitimate servers retry automatically, spam cannons usually do not. The first retry typically lands 1 to 15 minutes after the initial attempt, and some senders back off even further on first contact.",
+          "In practice that means a verification code can take anywhere from five seconds to several minutes to appear, depending on whether the sender's infrastructure has talked to your temp provider's mail servers before. Large senders — Google, Meta, Amazon — usually arrive in under 30 seconds because their servers are already warmed up everywhere. Smaller sites, indie SaaS tools, and forum software can take two to five minutes on a first send.",
+          "Worked example: you sign up at 14:02:10. The site's mail server connects at 14:02:14 and gets a 4xx deferral. Its retry schedule is 5 minutes, then 15, then 30. Your code appears at 14:07:20 — five minutes and ten seconds after you clicked, long after most people have regenerated the address and requested a second code, which now queues behind the first. The fix is patience with a number attached: wait a full 60 seconds before doing anything, and up to five minutes before declaring failure. Set a timer. Staring at the inbox makes every second feel like ten.",
+        ],
+      },
+      {
+        heading: "Fix 3: Check whether the site blocks the domain outright",
+        paragraphs: [
+          "This is the single most common cause, and the cruelest: the site accepts your address, shows a cheerful 'verification email sent', and never sends anything — because its backend rejects the domain at validation time or routes it to a dead queue. Major platforms maintain blocklists of known disposable domains, and they do not tell you when you are on one. The form lies to protect its anti-abuse logic.",
+          "Test it in thirty seconds: from your regular email, send a message to your temp address. If it arrives, the inbox works and the problem is the site, not you. If it does not arrive, the problem is the inbox or your browser — skip to Fix 4 and Fix 6.",
+          "If your own test lands but the site's mail never does, you have a blocklist hit. Your options, in order: try a different domain on the same service (providers rotate multiple domains precisely because blocklists are per-domain); try a different temp provider entirely; or accept that this particular site requires a real address. Social platforms are the strictest here — our walkthrough of [signing up for Facebook with a disposable address](/blog/temporary-email-for-facebook-signup) covers which of the big networks still accept temp domains and which stopped years ago. For verification codes specifically, the [honest breakdown of which OTPs actually arrive](/blog/is-temp-mail-safe-for-otp) will save you from retrying a door that will never open.",
+        ],
+      },
+      {
+        heading: "Fix 4: Refresh the inbox properly — and check your ad blocker",
+        paragraphs: [
+          "Most temp inboxes do not push mail to you; they poll. A small JavaScript timer asks the server 'anything new?' every few seconds. Break that timer and the inbox looks dead while mail piles up server-side. Three things break it routinely.",
+          "First, tab throttling. Browsers deprioritize background tabs — Chrome and Edge can stretch a 5-second poll into a 60-second one, or suspend it entirely, when the tab is not visible. Keep the inbox tab active and in the foreground while you wait. Second, aggressive ad blockers and privacy extensions. Filters like uBlock Origin occasionally flag the inbox's API endpoints as trackers and silently block the polling requests. The page renders fine — it just never updates. If mail is not arriving, disable the blocker for the temp-mail domain and hard-refresh (Ctrl+Shift+R or Cmd+Shift+R). Third, stale sessions. If the page has been open since before the address regenerated, its session token may point at a dead inbox. A full reload re-syncs everything.",
+          "One more browser quirk worth knowing: some 'copy' buttons write the address to the clipboard with an invisible trailing space or newline. Paste it into a plain text field first — Notepad, a URL bar — and check both ends before pasting it into the signup form.",
+        ],
+      },
+      {
+        heading: "Fix 5: Make sure the site sent it to the address you think it did",
+        paragraphs: [
+          "This sounds insulting and it catches everyone: the address on the signup form is not the address in your inbox. Autocomplete, password managers, and your own fast typing all conspire here. The site sent the email exactly where you told it to — just not where you are looking.",
+          "The definitive test: trigger the site's mail again, but first paste your temp address into a scratchpad and read it aloud, character by character, against the inbox. Pay special attention to the characters humans garble: 0 versus O, 1 versus l versus I, hyphens versus underscores, and doubled letters. Temp addresses are machine-generated strings, which makes them typo magnets — a single wrong character is a different, equally valid inbox belonging to a stranger.",
+          "If the site offers a 'change email' or 'resend to a different address' option, use it after verifying the string. One careful re-entry beats five frustrated retries.",
+        ],
+      },
+      {
+        heading: "Fix 6: Check whether the inbox already expired",
+        paragraphs: [
+          "Temp inboxes have a lifespan — on this service, one hour from creation, with all mail auto-deleted at expiry. If you generated the address, got distracted, and came back forty minutes later to finish the signup, you may be watching a corpse: the page still renders, but the address no longer accepts mail, and anything sent to it bounces or vanishes.",
+          "The fix is a fresh address and a faster workflow: generate, paste, submit, and keep the tab open until the code arrives. Do not generate the address 'in advance' while you browse the site's pricing page. And if a signup flow itself takes longer than the inbox lifespan — multi-step registrations with manual review — that flow was never a temp-mail candidate; see our guide to [password resets through a one-hour inbox](/blog/how-to-use-temp-mail-for-password-resets) for how to think about time-boxed addresses. The full lifecycle — creation, the one-hour window, and what auto-deletion actually wipes — is explained in [what a temporary email really is](/blog/what-is-temporary-email).",
+        ],
+      },
+      {
+        heading: "Fix 7: Resend — but respect the throttle",
+        paragraphs: [
+          "Almost every signup form has a 'resend code' link, and almost every user hammers it. Do not. Senders rate-limit verification mail per address — typically one send per 60 to 120 seconds, with escalating lockouts after three to five attempts. Each extra click does not send another email; it extends the lockout, and when the lockout lifts, a burst of stale codes arrives all at once, each invalidating the last.",
+          "The correct resend protocol: wait for the cooldown the page states (or 90 seconds if it states none), click once, then return to Fix 2's waiting game. Two disciplined resends beat ten frantic ones.",
+          "Also check the failure the form hides: 'account already exists'. Some sites, when you sign up with an address that is already registered, show the same 'verification email sent' screen but send nothing — or send a 'you already have an account' notice to the real owner's address. If you have used this temp address before (or someone else generated the same string — collisions happen on short address pools), try the site's login or password-reset flow instead of another signup.",
+        ],
+      },
+      {
+        heading: "Fix 8: Consider that the sender never sent anything",
+        paragraphs: [
+          "Sometimes the email does not exist. The site's form accepted your address, the button showed a success animation, and the backend queued nothing — because of a bug, a misconfigured mail provider, or a queue backed up for hours. This is more common than developers admit: email is the most neglected infrastructure in early-stage products, and 'we sent it' screens are written before the sending works.",
+          "How to tell: check the site's status page or social accounts for outage reports, try the flow with your real address as a control (use a [tiered inbox setup](/blog/temporary-email-vs-real-inbox-privacy) so the test costs you nothing long-term), and look at whether the site even validates the address format — a form that accepts 'asdf' as an email is a form whose backend you should not trust.",
+          "If the control email to your real address also never arrives, the problem was never your temp inbox. Report it to the site and move on — no temp-mail fix in the world delivers mail that was never sent.",
+        ],
+      },
+      {
+        heading: "Fix 9: Switch the domain, not the whole service",
+        paragraphs: [
+          "When every fix fails, the instinct is to blame the provider and switch services. Try the cheaper move first: switch domains within the same service. Disposable providers operate multiple domains — on Temp Mail you might see @abahi.tech, @abahi.page, and @abahi.me — and blocklists, greylisting history, and sender reputation are all per-domain. A domain that one site blocks may be unknown to that site's filters under a different suffix, while your workflow, bookmarks, and habits stay exactly the same.",
+          "This works because blocklists are lists of strings, not judgments about providers. The site blocking @abahi.tech has no opinion about @abahi.page until someone adds it. Domain rotation is the entire reason serious temp services maintain several — it is not branding, it is deliverability engineering.",
+          "Only if two or three domains all fail should you conclude the site blocks disposable mail categorically. At that point the honest answer is a real address — ideally an alias, not your primary — and our [tiered inbox guide](/blog/temporary-email-vs-real-inbox-privacy) shows how to give sites a real address without giving them your real inbox.",
+        ],
+      },
+      {
+        heading: "The 90-second diagnostic checklist",
+        paragraphs: [
+          "When the code is not there, run this in order — it takes about ninety seconds and pinpoints the cause every time.",
+          "1. Copy the address from your inbox tab with the copy button; confirm it matches the signup form exactly.",
+          "2. Send yourself a test email from your real address. Arrives → the inbox works, suspect the site. Does not arrive → hard-reload the page with your ad blocker disabled.",
+          "3. Check the clock: has it been a full 60 seconds since you clicked send? Has the inbox been alive for less than an hour?",
+          "4. Click resend exactly once, then wait — no hammering the button.",
+          "5. Still nothing after five minutes? Switch the temp domain and retry once.",
+          "Six checks, one root cause, every time. The email is either blocked, delayed, misaddressed, expired, or never sent — and now you know which.",
+        ],
+      },
+      {
+        heading: "When a temp inbox is the wrong tool",
+        paragraphs: [
+          "These fixes resolve the overwhelming majority of missing-mail cases. But some flows were never meant for a one-hour address: bank accounts, primary social profiles, anything where losing access means losing money or identity. The rule is simple — if you would panic about losing access to the account, do not secure it with an address designed to self-destruct. Temp mail is for the first date, not the marriage.",
+          "Used in its lane, though, a disposable inbox is the single highest-leverage privacy habit on the internet: one address per signup, zero accumulation, nothing to unsubscribe from. Keep this diagnostic bookmarked, and the next time a code goes missing, you will spend ninety seconds finding it instead of an afternoon cursing the inbox. Start with a fresh address on the [Temp Mail homepage](/) and put the checklist to work.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
