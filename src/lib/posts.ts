@@ -1651,6 +1651,79 @@ export const POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "can-websites-detect-temp-mail",
+    title: "Can Websites Detect Temp Mail? How Detection Works",
+    excerpt:
+      "Can websites detect temp mail? Yes — most big sites flag disposable addresses in milliseconds using domain blocklists, MX checks, and risk-scoring APIs. Here is how each method works and how to avoid getting rejected.",
+    date: "2026-10-21",
+    readMinutes: 8,
+    content: [
+      {
+        paragraphs: [
+          "You paste a fresh disposable address into a signup form, click submit — and the form shakes its head: “This email address is not allowed.” So can websites detect temp mail? Yes, they can — and most large sites do it automatically, in the fraction of a second between your click and the page reloading. But detection is not one trick. It is a layered system of blocklists, DNS checks, domain-age scoring, and risk APIs, and understanding those layers is the difference between getting silently rejected and sailing through verification on the first try.",
+          "This is one of the web’s quieter arms races. On one side sit open-source blocklist projects cataloging tens of thousands of throwaway domains, maintained like antivirus definitions and refreshed constantly, plus commercial email-validation APIs — the same ones checkouts use to catch typos — that ship disposable-domain detection as a standard checkbox, frequently enabled by default. On the other side sit temp-mail services rotating through fresh domains to stay ahead. If you have ever wondered why an address that worked last month gets rejected today, this arms race is the reason.",
+          "This guide breaks down the five detection methods sites actually use, which categories of sites block the hardest, the three rejection patterns you will run into in practice, and — most usefully — how to lower your odds of getting flagged without doing anything shady.",
+        ],
+      },
+      {
+        heading: "How websites actually catch disposable addresses",
+        paragraphs: [
+          "Method one is the domain blocklist, and it does the overwhelming majority of the work. When you submit a form, the server extracts everything after the @ and looks it up in a list. Open-source lists track tens of thousands of disposable domains; paid feeds refresh hourly. A domain like guerrillamail.com or temp-mail.org sits on essentially every list in existence. The check is a single database lookup — a few milliseconds, near-zero cost — which is why even a hobby forum running on shared hosting can afford to do it.",
+          "Method two is the MX-record check. Real mailboxes live on domains with real mail servers, and a quick DNS lookup for MX records confirms that. Some one-shot disposable generators use domains with no functioning mail infrastructure of their own, or with suspicious “catch-all” configurations that accept mail for literally any address. Either pattern is a cheap signal that the domain exists to absorb signups rather than to belong to anyone.",
+          "Method three is domain age and reputation scoring. Fraud teams know disposable services burn through domains: a domain registered twelve days ago that has never carried legitimate mail looks very different from a fifteen-year-old ISP domain. Several risk engines auto-flag or step up scrutiny on anything younger than roughly sixty to ninety days. This is also why a temp-mail domain that worked fine in spring can start failing in autumn — it got old enough to be noticed, cataloged, and listed.",
+          "Method four is the validation and risk-scoring API. Services in this category return a verdict per address — fields like is_disposable: true alongside a risk score such as 0.87. Big signups at banks, brokerages, and major platforms run these on every registration. They combine blocklists with behavioral data: how many accounts were created from this domain this week, what the bounce rates look like, whether abuse reports mention it. One API call, one number, one decision.",
+          "Method five is pattern and behavior heuristics on the site’s own side. The local part of the address (the bit before the @) barely matters, but creation velocity does: five accounts in ten minutes from the same domain and IP address is exactly the shape of a fake-account farm. Some sites don’t block at signup at all — they let you in, then silently throttle the account or demand re-verification days later, when the disposable address is already dead. That delayed lockout is the nastiest pattern on this list, and we’ll come back to it.",
+        ],
+      },
+      {
+        heading: "Can websites detect temp mail from the address alone?",
+        paragraphs: [
+          "Mostly yes — because the domain does roughly ninety percent of the work. Two identical local parts, two different domains, two different outcomes: bright.fox412@guerrillamail.com dies at the blocklist lookup on thousands of sites, while bright.fox412 on a fresh, little-known domain passes the same check without a flicker. The random-looking string before the @ that people worry about is almost irrelevant; servers are judging your domain’s reputation, not your username’s aesthetics.",
+          "The honest caveat: no detection method is perfect, and sites know it. A strict blocklist produces false positives (legitimate small providers occasionally land on lists), while a loose one lets obvious throwaways through. That is why risk scores exist — many sites don’t hard-block at all, they just route a flagged signup into extra verification: solve a harder CAPTCHA, verify a phone number, wait in a review queue. If you have ever been asked for SMS verification immediately after using a disposable address, you were probably scored, not blocked.",
+          "There is one more thing the address alone can’t reveal: intent. Detection tells a site the address is disposable; it cannot tell whether you are a privacy-conscious human signing up for one newsletter or a script creating its four-hundredth fake account. Every countermeasure in the next sections works with that grain — make your signup look like the first kind of user, because you are.",
+        ],
+      },
+      {
+        heading: "Which sites block disposable addresses hardest",
+        paragraphs: [
+          "Banks, brokerages, crypto exchanges, and payment apps are the strictest, approaching total blocking. The driver is regulation — know-your-customer and anti-money-laundering rules — plus the simple fact that they need a durable way to reach you about your money. Expect a hard block at the form level, usually backed by phone verification. This is one category where you should not even try; our [OTP safety guide](/blog/is-temp-mail-safe-for-otp) explains why money and disposable inboxes don’t mix.",
+          "Apple, Google, and Microsoft account creation are nearly as aggressive. They are building a permanent identity graph, not processing a one-time transaction, so a self-destructing address defeats the purpose from their perspective. A phone number is typically required regardless of which email you offer.",
+          "Streaming services and SaaS free trials are the most economically motivated blockers — and the real engine of the detection industry. One abused disposable domain can cost a SaaS product thousands of dollars in free-trial fraud, so trial-heavy companies buy the best blocklist feeds money can buy and check aggressively. If your goal is sampling software without the spam aftermath, read our [free-trial playbook](/blog/how-to-use-temp-mail-for-free-trials) first; it was written around exactly this hostility.",
+          "Government portals, universities, and many employers’ application systems commonly block disposable domains too, and frequently go further by requiring an institutional or ISP address. Social networks are mixed: Facebook has historically rejected known disposable domains at registration — we documented what actually works in our [Facebook signup guide](/blog/temporary-email-for-facebook-signup) — while smaller forums and indie apps often run no checks at all. The pattern is consistent: the more a fake account costs the site, the harder it blocks.",
+        ],
+      },
+      {
+        heading: "Three rejection scenarios you’ll actually run into",
+        paragraphs: [
+          "Scenario one: the instant form error. You submit, the page reloads, and a red line says “please enter a valid email address.” Nothing was sent anywhere — the domain hit a blocklist during validation and the signup never started. This is the most common pattern and the easiest to fix: switch to a different domain or service and try again. On Temp Mail you get three to choose from — @abahi.tech, @abahi.page, and @abahi.me — and a domain flagged on one site is very often clean on the next, because blocklists catalog domains unevenly.",
+          "Scenario two: the code that never arrives. The signup appears to succeed, the site promises a verification email, and your inbox stays empty past the code’s expiry. Either the domain is blocked at the mail-server level or the message was silently discarded as spam. Before blaming the inbox, run the diagnostics in our [nine-fix guide](/blog/temp-mail-not-receiving-emails) — it finds the real culprit in about ninety seconds, and roughly half the time the problem is throttling or a mistyped address rather than a block.",
+          "Scenario three: the delayed lockout. The account works for a day or a week, then the site demands re-verification — sent to an address that no longer exists. This is the post-signup risk review from method five, and it is the one that actually costs people access. The defense is strategic, not technical: only use disposable addresses where losing the account is acceptable. If you might return to the account in a month, it was never a temp-mail job. Our [practical privacy guide](/blog/temporary-email-vs-real-inbox-privacy) has a simple decision rule for drawing that line.",
+        ],
+      },
+      {
+        heading: "How to lower your odds of getting flagged",
+        paragraphs: [
+          "Use newer, less-famous domains. This is the single biggest lever you control. Detection is domain-reputation work, so an address on a domain the blocklists haven’t cataloged yet sails through checks that would stop a famous throwaway domain cold. Rotating between Temp Mail’s three domains — @abahi.tech, @abahi.page, @abahi.me — is the practical version of this: when one draws a flag somewhere, the others usually don’t.",
+          "Don’t behave like a bot farm. Creating five accounts in ten minutes from the same domain and IP address is precisely the shape the behavioral heuristics are tuned to catch. One account, at a human pace, with normal pauses between steps, looks like what it is. If a site rejects your first attempt, do not hammer it with fresh disposable addresses — repeated attempts can get your IP address flagged instead, which poisons every address you try afterward, disposable or not.",
+          "Match the address to the stakes, and time the signup properly. Temp Mail inboxes live for one hour: start the signup when you are ready to finish it, because a verification code that arrives after the inbox dies is the same as a code that never arrives. And keep the bright line — money, recovery, identity, anything you might need in six months — on a real address. The sites that block hardest are usually the sites where a disposable address would hurt you most anyway.",
+        ],
+      },
+      {
+        heading: "When detection is actually on your side",
+        paragraphs: [
+          "Blocking disposable addresses isn’t pure villainy, and it’s worth saying so on a temp-mail blog. For banks, brokerages, and anywhere money moves, rejecting throwaway addresses is a genuine anti-fraud measure — it raises the cost of spinning up fake accounts for scams and phishing. If a site handling your money accepts a one-hour inbox without blinking, that is arguably a red flag about the site, not a win for you.",
+          "The detection industry exists mostly because of free-trial abuse and fake-account farms; the privacy-conscious human signing up for one newsletter is collateral damage in that fight. Understanding this keeps expectations honest: temp mail is a privacy tool for low-stakes signups, not a skeleton key for every form on the internet. Used where it fits — trials, downloads, one-off verifications, keeping your real address out of marketing databases — it remains one of the highest-leverage privacy habits available, detection and all.",
+        ],
+      },
+      {
+        heading: "Bottom line",
+        paragraphs: [
+          "Websites can detect temp mail, and the mechanism is less mysterious than it feels: blocklists do most of the work in milliseconds, MX and domain-age checks catch the rest, and risk-scoring APIs turn it all into a single number. Your counter-moves are equally unmysterious — fresh, lesser-known domains, human-paced signups, and the discipline to match the tool to the stakes. Generate an address on the [Temp Mail homepage](/), pick the domain the site hasn’t seen, and finish the signup inside the hour. The arms race continues in the background; you don’t need to win it, just to walk through the gap it leaves.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
