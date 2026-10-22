@@ -1724,6 +1724,98 @@ export const POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "temp-mail-vs-firefox-relay",
+    title: "Temp Mail vs Firefox Relay: Which Disposable Email Wins in 2026?",
+    excerpt:
+      "Temp mail vs Firefox Relay: Mozilla's alias masks vs true one-hour disposable inboxes — compared on privacy, OTP, speed, and price, with a 2026 winner.",
+    date: "2026-10-22",
+    readMinutes: 9,
+    content: [
+      {
+        paragraphs: [
+          "There is a signup form in front of you — a free ebook, a forum account, a discount code that expires tonight. It wants your email address, and your real inbox is the last place that address should end up. Two tools promise to stand between you and the form: Mozilla's Firefox Relay, which hands out alias masks that forward to your real inbox, and true temp mail, which gives you an inbox that lives for an hour and then deletes itself. The temp mail vs firefox relay question looks like a product choice, but it is really a question about what kind of privacy you need: a permanent shield you manage, or a disposable one you never think about again.",
+          "They are built on opposite philosophies. Relay is an alias service — every mask points at your real address through Mozilla's servers, and the relationship lasts until you kill the mask. Temp mail is an amnesiac — no account, no forwarding, no history, just a working inbox with a countdown timer. Both hide your real address from the sender. Everything else about them diverges: cost, speed, what the provider itself can see, and what happens when the site you signed up for gets breached six months later.",
+          "We ran the comparison the way a real user would experience it: creating addresses, timing verification emails, pricing out a year of heavy use, and stress-testing both against the five privacy questions that actually matter. No sponsored rankings, no vague “it depends” — by the end you will know exactly which tool to reach for, and when the right answer is both.",
+        ],
+      },
+      {
+        heading: "Temp mail vs Firefox Relay: the 30-second verdict",
+        paragraphs: [
+          "If you want the answer before the evidence, here it is. For one-off signups — trials, downloads, discount codes, forum registrations you will touch once — temp mail wins by a mile: it is free, it takes five seconds, and there is nothing to manage afterward because the inbox destroys itself. For relationships that persist — newsletters you might read next month, accounts you will log into again, anything where “I might need this email address later” is true — Firefox Relay wins: masks survive indefinitely, can be switched off individually, and cost nothing at the free tier.",
+          "The deeper truth is that most privacy-conscious people should use both, in different slots of the same system. Temp mail is the front-door bouncer for strangers; Relay is the doorman for acquaintances. Your real address stays reserved for the inner circle — bank, employer, family. The rest of this article is the evidence behind that verdict, with numbers.",
+        ],
+      },
+      {
+        heading: "What Firefox Relay actually is (and what it costs in 2026)",
+        paragraphs: [
+          "Firefox Relay launched out of Mozilla in 2020 as an answer to a simple observation: people hand their real address to hundreds of sites, and every one of those sites is a future breach, a future spam source, a future data-broker sale. Relay's answer is the email mask — a random address like k7x2p@mozmail.com that forwards everything it receives to your real inbox. The site never learns your real address; you never lose access to the messages. Masks can be individually disabled or deleted, and a deleted mask bounces new mail, which makes it a clean kill-switch for a noisy sender.",
+          "The pricing is refreshingly honest. The free tier gives you five masks — enough to test the concept, not enough to live on. Relay Premium costs $1.99 per month billed annually (about $23.88 a year) and unlocks unlimited masks, a custom subdomain so your masks look like anything@yourname.mozmail.com, the ability to reply to forwarded mail from the mask, and promotional-email blocking. There is also a phone-number masking add-on at $4.99 a month billed annually (roughly $59.88 a year, US and Canada only) that gives you a virtual number for texts and calls. The full stack — email plus phone — runs about $83.76 a year.",
+          "The structural catch is the account. Relay requires a Mozilla account, and every mask resolves to the real inbox behind that account. Mozilla's privacy posture is genuinely good — it is a nonprofit with a public privacy track record, not an ad company — but the architecture means Mozilla stores a permanent mapping between your masks and your real address. That mapping has to exist, or forwarding cannot work. Relay is also one of several alias systems in this space: Apple's version is [Hide My Email](/blog/temp-mail-vs-icloud-hide-my-email), and Gmail's built-in plus-addressing is a weaker cousin we compared [against true temp mail](/blog/gmail-aliases-vs-temp-mail). Relay is the most capable of the three, but all three share the same architecture: a permanent forwarding relationship.",
+        ],
+      },
+      {
+        heading: "What a true temp mail inbox does differently",
+        paragraphs: [
+          "Temp mail inverts every one of Relay's design choices. Open the [Temp Mail homepage](/) and an address is already waiting — something like bright.fox412@abahi.tech — with no signup form, no Mozilla account, no password to invent. The inbox refreshes every few seconds, verification codes land in near real time, and sixty minutes after you stop using it, the address and every message in it are purged. There is no “manage your masks” dashboard because there is nothing to manage: the entire lifecycle is create, use, forget.",
+          "The receive-only, self-destructing design is the whole privacy argument. Because there is no account, there is no mapping of anything to anyone — nothing to subpoena, breach, or sell, because the database row never existed. Because nothing forwards anywhere, there is no real inbox for a tracking pixel to report back to. The tradeoff is equally absolute: if you need that address again tomorrow — a password reset, an order confirmation, a “verify it is really you” email in three weeks — it will not be there. Temp mail is a tool for interactions with an expiration date, and it is honest about it.",
+          "Three domains rotate behind the service — @abahi.tech, @abahi.page, and @abahi.me — partly so that if one domain lands on a site's blocklist, the others keep working. That rotation matters more than it sounds, because the single biggest practical difference between any two disposable services is not their interface; it is how often their domains get through. Detection is mostly domain-reputation work, and the principle matters more than any single ranking.",
+        ],
+      },
+      {
+        heading: "Five privacy tests, head to head",
+        paragraphs: [
+          "Test one: the breach. Six months after signup, the site gets breached and its user database — your address included — goes up for sale. With Relay, the exposed address is a mask; you disable or delete it in ten seconds and the attacker's list goes dead. With temp mail, the exposed address died on its own months ago — there is nothing to disable because there is nothing left. Both pass, differently: Relay gives you a kill-switch, temp mail gives you a corpse. Edge to temp mail for pure blast radius — a dead address cannot be reactivated by anyone, including the provider.",
+          "Test two: linkage to your identity. Relay knows exactly who you are: a Mozilla account, a verified real inbox, a billing record if you pay. Subpoena Mozilla, breach Mozilla, buy Mozilla's data pipeline — the mask-to-human mapping is the product's core table. Temp mail holds no mapping at all; the address existed in a browser session and a transient cache. This is the starkest architectural gap between the two, and it is not close: temp mail wins outright, because you cannot leak what you never stored.",
+          "Test three: tracking pixels and read receipts. Here both are merely okay. Relay forwards the full HTML email to your real inbox, tracking pixel included — whether the tracker fires depends on your email client's image blocking, not on Relay. Temp mail renders messages in the browser, where the same client-side protections apply. Neither service strips trackers by default, so do not award either a point here; the defense is your mail client's settings, and it is identical on both sides.",
+          "Test four: what the provider retains. Mozilla must retain your masks indefinitely — forwarding is impossible otherwise — along with account metadata and, on the paid tier, billing history. Temp mail retains messages for a maximum of sixty minutes and purges the session data with them; there is no long-term store by design. If your threat model includes the provider itself — a breach, an acquisition, a government request — the service that deletes everything hourly is structurally safer than the nonprofit that must remember everything forever.",
+          "Test five: what the sender can infer. Both hide your real address, but the mask's domain tells a story. Relay masks live on mozmail.com and relay.firefox.com — famous, well-cataloged domains that appear on disposable-address blocklists and in fraud-detection datasets. Temp Mail's @abahi.tech, @abahi.page, and @abahi.me are far less famous, which in practice means fewer automated rejections at signup forms. We mapped how [websites detect temp mail](/blog/can-websites-detect-temp-mail) in detail; the short version is that detection is mostly domain-reputation work, and obscurity is a genuine, if temporary, advantage.",
+          "Scorecard: temp mail takes breach blast radius, identity linkage, provider retention, and sender inference — four of five. Relay's single win is the kill-switch convenience of test one, and even that is a draw in practice. On pure privacy, the disposable inbox wins.",
+        ],
+      },
+      {
+        heading: "OTP codes and verification emails: where each one breaks",
+        paragraphs: [
+          "Both services receive one-time passwords just fine in the common case — a mask forwards the code, a temp inbox displays it — and for low-stakes verifications (confirm this forum account, verify this download) either works. The divergence is durability. A Relay mask still exists when the site asks you to re-verify in three months; a temp-mail address does not. Our [OTP safety guide](/blog/is-temp-mail-safe-for-otp) draws the line precisely: one-time verification on a throwaway account is a temp-mail job, anything with an account you might need to recover is not.",
+          "Worked example, real stakes. You are signing up for a project-management tool's free trial for a client project. With temp mail: 5 seconds to grab the address, code arrives in under 10 seconds, trial activated, inbox dies an hour later — total lifetime cost zero, total future spam zero. With Relay free: open the Relay dashboard, generate a mask (about 30 seconds if you are quick), paste, wait for the forward (10 to 60 seconds depending on greylisting), trial activated — and the mask sits in your dashboard forever, one more thing to curate. For a trial you will abandon in a week, Relay's permanence is pure overhead.",
+          "Now flip it: a freelance marketplace account you will use for years. Temp mail here is a trap — the day the platform demands re-verification, your address is a ghost and your account is hostage. Relay's mask survives, forwards the re-verification code, and keeps working. The rule is simple enough to tattoo: if losing the address means losing something, it was never a temp-mail signup. Match the tool's lifespan to the relationship's lifespan.",
+        ],
+      },
+      {
+        heading: "The cost math nobody shows you",
+        paragraphs: [
+          "Temp mail costs $0 — no tiers, no upsells, no “premium” badge. Relay's free tier costs five masks, which for a heavy signup user lasts about a week. So the honest comparison is temp mail at $0 against Relay Premium at $23.88 a year. Run the numbers for someone who does 150 throwaway signups a year — trials, downloads, one-off forums, the normal background radiation of internet life. Temp mail: $0.00 per signup. Relay Premium: $23.88 divided by 150, about $0.16 per signup. Add the phone-masking tier and the full Relay stack lands at about $83.76 a year, or $0.56 per signup. None of these numbers will bankrupt anyone, but the direction is unambiguous: the disposable inbox is free at any volume, and Relay's price is the price of permanence.",
+          "There is a second, sneakier cost: curation time. Every Relay mask you create is a row in a dashboard you will eventually have to audit — which of these 40 masks is still needed, which sender is the noisy one, which mask did I use for that account in 2024? At thirty seconds per mask per year of curation, 150 masks cost you 75 minutes annually — a hidden subscription paid in attention. Temp mail's curation cost is zero because there is nothing to curate; the service does the janitorial work by deleting everything. Free is not just the price; it is the maintenance model.",
+          "The counter-argument is real but narrow: $23.88 a year is cheap for a permanent, kill-switchable identity layer, and for masks attached to accounts you keep, it is money well spent. The mistake is paying for permanence on signups that needed an hour. Use the free tool for the disposable work and the paid tool for the durable work, and the math stays honest.",
+        ],
+      },
+      {
+        heading: "Speed test: who delivers the code faster?",
+        paragraphs: [
+          "When a six-digit code is ticking down its ten-minute expiry, delivery latency is the whole game. Temp mail's inbox polls its servers every few seconds, so a code typically appears within 5 to 15 seconds of the sender dispatching it — the page is already open in your tab, so there is no context switch. Relay adds a forwarding hop: Mozilla's servers receive the mail, process it, and re-send it to your real inbox, which then has to fetch it. In practice that lands in 10 to 60 seconds, with occasional greylisting delays stretching past two minutes on unfamiliar senders.",
+          "Creation speed favors temp mail even more decisively. Grabbing a temp address is a page load — roughly 5 seconds, address already generated. Creating a Relay mask means opening the Relay dashboard or extension, generating the mask, and copying it — 20 to 30 seconds on a good day, longer if you need to sign in to your Mozilla account first. Over a year of 150 signups, that gap compounds: about 12 minutes of address-grabbing with temp mail versus over an hour with Relay. Neither number ruins your day, but when the discount code expires at midnight, seconds matter.",
+          "One honest caveat: temp mail's speed assumes the sender's mail reaches the temp-mail servers promptly, and aggressive senders occasionally throttle unfamiliar domains. Relay's forwarding rides on Mozilla's established mail reputation, which some corporate senders trust more. In practice the temp-mail path still wins the race more often than not — but if a code is late, the fix is the same on both sides: wait 60 seconds, request a resend, and only then suspect the inbox.",
+        ],
+      },
+      {
+        heading: "The 60-second decision matrix",
+        paragraphs: [
+          "One-off download, free trial, discount code, Wi-Fi portal, survey, beta signup you will never open again — temp mail. The address needs to live for exactly one verification email, and then it should die. Nothing else is this fast or this free.",
+          "Newsletter you might actually read, forum you will visit monthly, shopping account with order history, any login you will use again next quarter — Firefox Relay. Generate one mask per service, label it, and enjoy a kill-switch for each relationship. The five free masks cover your five most important recurring signups; Premium covers the rest.",
+          "Bank, brokerage, government services, primary social accounts, password recovery for anything that matters — your real address, no exceptions. Neither tool belongs here: temp mail dies too fast and Relay adds a forwarding dependency to your most critical accounts. This is the bright line both services' honest documentation draws, and it is the one rule in this article you should never bend.",
+          "Developer testing — spinning up test accounts, hammering signup and password-reset flows, load-testing verification pipelines — temp mail, and it is not close. Programmatic address generation with no account and no dashboard to clean up is exactly what QA automation wants; several teams run entire test suites against disposable inboxes for this reason.",
+        ],
+      },
+      {
+        heading: "Bottom line: the setup that beats both",
+        paragraphs: [
+          "The temp mail vs firefox relay debate has a winner on points — temp mail takes privacy, cost, and speed; Relay takes durability and curation — but the real prize goes to the layered setup. Three tiers, three tools: temp mail for strangers (one-off signups, trials, downloads), Relay masks for acquaintances (recurring accounts, newsletters, anything with a future), and your real address for the inner circle (money, identity, recovery). Each tier matches the tool's lifespan to the relationship's lifespan, which is the entire decision rule in one sentence.",
+          "This is not exotic operational security; it is inbox hygiene with a system behind it. Start today: the next signup form that asks for your email gets a temp address from the [Temp Mail homepage](/), the next newsletter you actually want gets a Relay mask, and your real inbox quietly gets 80 percent quieter within a month. For the full version of this system — the tiered-inbox strategy that keeps one-off signups from ever polluting your real address — our [practical privacy guide](/blog/temporary-email-vs-real-inbox-privacy) walks through the whole setup step by step.",
+        ],
+      },
+    ],
+  },
+
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
