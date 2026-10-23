@@ -76,8 +76,40 @@ export default async function BlogPostPage({
 
   const others = (await getAllPosts()).filter((p) => p.slug !== post.slug);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Temp Mail",
+      url: "https://tempmaill.tech",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Temp Mail",
+      url: "https://tempmaill.tech",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://tempmaill.tech/logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://tempmaill.tech/blog/${post.slug}`,
+    },
+    image: "https://tempmaill.tech/og-image.png",
+  };
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <Link
           href="/blog"
