@@ -202,7 +202,7 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "temporary-email-vs-real-inbox-privacy",
-    title: "Temporary Email vs. Your Real Inbox: A Practical Privacy Guide",
+    title: "Temporary Email vs. Your Real Inbox: A Privacy Guide",
     excerpt:
       "How disposable addresses fit into a sensible online privacy setup — and the mistakes to avoid.",
     date: "2026-10-11",
@@ -379,7 +379,7 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "gmail-aliases-vs-temp-mail",
-    title: "Gmail Aliases vs. Temp Mail: Which One Actually Protects Your Privacy?",
+    title: "Gmail Aliases vs. Temp Mail: Which Protects Your Privacy?",
     excerpt:
       "Dots, plus-addressing, and throwaway inboxes all promise less spam. Only one of them actually breaks the tracking chain — here is the honest comparison.",
     date: "2026-10-15",
@@ -750,7 +750,7 @@ export const POSTS: BlogPost[] = [
   },
     {
     slug: "10-minute-mail-vs-guerrilla-mail",
-    title: "10 Minute Mail vs Guerrilla Mail: Which Throwaway Inbox Wins?",
+    title: "10 Minute Mail vs Guerrilla Mail: Which Inbox Wins?",
     excerpt:
       "10 Minute Mail vs Guerrilla Mail compared: lifespan, privacy, address control, and features — plus a third option — so you can pick the right disposable inbox.",
     date: "2026-10-16",
@@ -837,7 +837,7 @@ export const POSTS: BlogPost[] = [
     slug: "how-to-stop-spam-emails-without-unsubscribing",
     title: "How to Stop Spam Emails Without Unsubscribing",
     excerpt:
-      "Unsubscribe links don't always work. Here's how to stop spam emails without unsubscribing \u2014 with disposable inboxes, better filters, and smarter signup habits.",
+      "Unsubscribe links don't always work. Here's how to stop spam without unsubscribing \u2014 disposable inboxes, better filters, smarter signup habits.",
     date: "2026-10-16",
     readMinutes: 5,
     content: [
@@ -1150,7 +1150,7 @@ export const POSTS: BlogPost[] = [
     slug: "temporary-email-for-job-applications",
     title: "Temporary Email for Job Applications: How to Do It Right",
     excerpt:
-      "Applying to dozens of jobs means your personal email lands in hundreds of recruiter databases. Here's how to use temporary email for job applications so callbacks still reach you — and the spam never does.",
+      "Dozens of job applications land your email in hundreds of recruiter databases. Here's how temporary email keeps callbacks coming — and spam out.",
     date: "2026-10-18",
     readMinutes: 8,
     content: [
@@ -1222,7 +1222,7 @@ export const POSTS: BlogPost[] = [
     slug: "best-disposable-email-apps-2026",
     title: "Best Disposable Email Apps in 2026: 7 Compared",
     excerpt:
-      "We compared the 7 most-installed disposable email apps for Android and iPhone on inbox lifetime, push alerts, privacy, and ads — here are the best disposable email apps of 2026.",
+      "We compared the 7 most-installed disposable email apps for Android and iPhone on inbox lifetime, push alerts, privacy, and ads. Here are the winners.",
     date: "2026-10-19",
     readMinutes: 8,
     content: [
@@ -1299,9 +1299,9 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "how-to-use-temp-mail-for-password-resets",
-    title: "How to Use Temp Mail for Password Resets (Without Losing Access)",
+    title: "Temp Mail Password Resets: How to Keep Access",
     excerpt:
-      "Password resets are where disposable addresses usually fail — the reset email arrives weeks after the inbox expired. Here is how to use temp mail for password resets without losing access, including the expiry math and a recovery ledger that keeps working.",
+      "Password resets are where disposable addresses usually fail. Here's how to use temp mail for password resets without losing access.",
     date: "2026-10-19",
     readMinutes: 12,
     content: [
@@ -1571,7 +1571,7 @@ export const POSTS: BlogPost[] = [
     slug: "10-minute-mail-alternatives-2026",
     title: "10 Best 10-Minute Mail Alternatives in 2026 (Tested)",
     excerpt:
-      "10-minute inboxes expire before your verification code arrives. We tested ten alternatives on delivery speed, inbox lifetime, and blocklist survival — here are the scores.",
+      "10-minute inboxes expire before your verification code arrives. We tested ten alternatives on delivery speed, lifetime, and blocklist survival.",
     date: "2026-10-21",
     readMinutes: 11,
     content: [
@@ -1655,7 +1655,7 @@ export const POSTS: BlogPost[] = [
     slug: "can-websites-detect-temp-mail",
     title: "Can Websites Detect Temp Mail? How Detection Works",
     excerpt:
-      "Can websites detect temp mail? Yes — most big sites flag disposable addresses in milliseconds using domain blocklists, MX checks, and risk-scoring APIs. Here is how each method works and how to avoid getting rejected.",
+      "Most big sites flag disposable addresses in milliseconds — domain blocklists, MX checks, risk scoring. Here's how they work and how to avoid rejection.",
     date: "2026-10-21",
     readMinutes: 8,
     content: [
@@ -1726,7 +1726,7 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "temp-mail-vs-firefox-relay",
-    title: "Temp Mail vs Firefox Relay: Which Disposable Email Wins in 2026?",
+    title: "Temp Mail vs Firefox Relay: Which Disposable Email Wins?",
     excerpt:
       "Temp mail vs Firefox Relay: Mozilla's alias masks vs true one-hour disposable inboxes — compared on privacy, OTP, speed, and price, with a 2026 winner.",
     date: "2026-10-22",
