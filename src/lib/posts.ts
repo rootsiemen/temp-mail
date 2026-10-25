@@ -2230,7 +2230,7 @@ export const POSTS: BlogPost[] = [
       },
       {
         image: {
-          src: "https://images.pexels.com/photos/34577/pexels-photo-34577.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          src: "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200",
           alt: "Person holding a credit card while using a laptop, representing the paid tier of alias services",
         },
         heading: "Cost math: $30 a year versus free forever",
@@ -2408,7 +2408,7 @@ export const POSTS: BlogPost[] = [
       },
       {
         image: {
-          src: "https://images.pexels.com/photos/163066/pexels-photo-163066.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          src: "https://images.pexels.com/photos/163066/desk-terminplanung-control-newsletter-163066.jpeg?auto=compress&cs=tinysrgb&w=1200",
           alt: "Desk with a planner, pens and a smartphone, planning the long-term cost of an inbox system",
         },
         heading: "Cost math: three years of aliases",
