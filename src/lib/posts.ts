@@ -4,7 +4,7 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   readMinutes: number;
-  content: { heading?: string; paragraphs: string[] }[];
+  content: { heading?: string; paragraphs: string[]; image?: { src: string; alt: string } }[];
 }
 
 export const POSTS: BlogPost[] = [
@@ -17,6 +17,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 6,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/5605061/pexels-photo-5605061.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Glowing neon envelope icon representing a new temporary email address",
+        },
         paragraphs: [
           "A temporary email address — also called disposable email, throwaway email, or temp mail — is a real, functioning inbox with a deliberately short lifespan. You can receive verification codes, confirmation links, newsletters, and one-time passwords with it, exactly as you would with a normal address. The difference: it is not connected to your identity, no signup is required to create it, and everything inside it is deleted automatically after a short period.",
           "On Temp Mail, that period is one hour. Open the homepage and an address like bright.fox412@abahi.tech is already waiting for you — no registration form, no password to invent, no waiting room. Copy it, paste it into whatever form asked for your email, and watch messages arrive in real time as the inbox refreshes every few seconds. When you are done — or when the hour passes — the address and every message in it vanish as if they never existed.",
@@ -39,6 +43,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/2882638/pexels-photo-2882638.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Letter tiles spelling the word PRIVACY, representing the personal data a disposable email address keeps out of marketing databases",
+        },
         heading: "The problem temp mail solves",
         paragraphs: [
           "Your email address is one of the most valuable pieces of data you own. Every site that collects it can email you forever, share it with partners, or lose it in a breach. Marketing databases are bought and sold between brokers; a single signup can turn into years of newsletters you never asked for, and every breach involving your address raises your exposure to phishing built on real personal details.",
@@ -61,6 +69,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/4397907/pexels-photo-4397907.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hourglasses with pouring sand, representing the one-hour lifespan of a temporary inbox",
+        },
         heading: "What actually happens when the hour ends",
         paragraphs: [
           "The promise of automatic deletion sounds simple, but the mechanics matter. On Temp Mail, your inbox lives only as long as your browser session stays active, up to a hard cap of sixty minutes. When that window closes — or when you close the tab — the address mapping is dropped from the routing table and every stored message is purged. There is no recycle bin, no soft-delete grace period, and no backup from which messages could be recovered.",
@@ -479,6 +491,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 6,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/9898392/pexels-photo-9898392.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Close-up of hands texting on a smartphone, the way one-time passcodes usually arrive",
+        },
         paragraphs: [
           "Is temp mail safe for OTP verification codes? The short answer is: it depends on what the code protects. A disposable inbox receives one-time passwords exactly like a normal address — the six-digit code arrives in seconds and you type it into the form. But because temp mail expires within an hour and cannot recover accounts later, it is the right tool for some OTP flows and a dangerous mistake for others. This guide draws that line clearly, with no hedging.",
           "The key question to ask yourself is simple: if I lost access to this email address tomorrow, would I be locked out of something I care about? If the answer is no, temp mail is fine. If the answer is yes, use a permanent address. Everything below is an elaboration of that one question.",
@@ -508,6 +524,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/11391947/pexels-photo-11391947.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Smartphone wrapped in a chain with a padlock, representing the security risks of a shared temporary inbox",
+        },
         heading: "The real risks: public inboxes and expiry timers",
         paragraphs: [
           "Two technical facts about temp mail create the risk profile, and both are worth understanding rather than fearing. First, temporary inboxes are not private by design — anyone who guesses your address can read its inbox during its lifetime. An OTP sitting in that inbox is visible to whoever looks. For a free-tool signup that matters little, but for anything tied to money or identity it is unacceptable. This is also why you should never request a code and then step away: enter it immediately.",
@@ -538,6 +558,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/3949098/pexels-photo-3949098.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hand holding a smartphone displaying a secure-connection app, a safer setup for receiving verification codes",
+        },
         heading: "A decision tree for every OTP situation",
         paragraphs: [
           "Run every OTP through this tree. Question one: is this code protecting money, identity documents, or account recovery for something important? If yes — bank logins, crypto exchanges, primary email recovery, government services — use your real address or authenticator app, full stop. No convenience is worth the risk.",
@@ -1379,6 +1403,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 11,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Blurred colorful programming code on a screen, representing the APIs developers use to automate disposable email",
+        },
         paragraphs: [
           "If you have ever watched an automated signup test stall at the “check your inbox” step, you already know the exact problem the best temp mail API for developers is built to solve. Disposable email is perfect for QA: instant, random, no-signup inboxes that catch verification links on demand and then evaporate. But most temp mail services were designed for humans clicking a refresh button — not for scripts running in a CI pipeline at 3 a.m. A human-grade inbox needs a button. A developer-grade one needs an endpoint.",
           "So we put seven popular disposable-email services through a developer-shaped stress test: official API quality, free tiers, programmatic inbox creation, message polling, domain choice, lifespan control, and the rate limits that decide whether your test suite survives contact with reality. We scored each out of 100, tried what we could for free, and — in the interest of honesty — scored our own Temp Mail inbox right alongside the rest. Here is what the best temp mail API for developers actually looks like in 2026, what it costs, and a working test flow you can steal.",
@@ -1423,6 +1451,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Computer screen with program code in a modern office, a typical automated email-testing workspace",
+        },
         heading: "A working test flow you can steal",
         paragraphs: [
           "Concepts first, vendor second: every API on this list boils down to the same four calls — create an inbox, get its address, wait for a message, read the message. Here is the shape of it in Playwright-style pseudocode that adapts to MailSlurp, testmail.app, or Mailinator with only the client lines changed:",
@@ -1438,6 +1470,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/4578665/pexels-photo-4578665.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "JavaScript code on a laptop screen, used to run automated signup and inbox tests",
+        },
         heading: "The catch: API tests are not human tests",
         paragraphs: [
           "Automated disposable-email testing has hard limits, and honest guides say so. Disposable domains are blocklisted by a meaningful share of major platforms — they have to be, or bots would farm them. CAPTCHAs and phone verification sit outside any email API's reach. And the one-hour or ten-minute lifespan that makes temp mail private also means your test fixtures have an expiration date; design around it instead of fighting it.",

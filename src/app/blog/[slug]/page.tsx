@@ -145,6 +145,15 @@ export default async function BlogPostPage({
                   {section.heading}
                 </h2>
               )}
+              {section.image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={section.image.src}
+                  alt={section.image.alt}
+                  loading="lazy"
+                  className="mt-4 w-full rounded-xl"
+                />
+              )}
               {section.paragraphs.map((p, j) => (
                 <p
                   key={j}
