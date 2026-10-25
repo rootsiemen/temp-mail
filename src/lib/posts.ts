@@ -114,6 +114,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 6,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/3850252/pexels-photo-3850252.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hand holding a smartphone with an email app open beside a laptop and books, an everyday signup moment",
+        },
         paragraphs: [
           "Most people discover temp mail the first time a download gate demands their email. But disposable addresses are useful in far more situations than that first encounter suggests. Below are seven of the best — each with exactly how to do it — so your real inbox stays reserved for mail that actually matters.",
         ],
@@ -147,6 +151,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7439136/pexels-photo-7439136.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Person typing on a laptop in a bright office, testing a product signup flow",
+        },
         heading: "5. Testing your own product",
         paragraphs: [
           "Developers and QA testers need fresh addresses constantly — testing registration, onboarding, double opt-in, and password-reset flows. Generating temp addresses is far faster than creating real mailboxes, and it keeps test data out of production analytics.",
@@ -182,6 +190,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5926399/pexels-photo-5926399.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Anonymous figure in a hoodie working on a laptop in a dark studio, representing sensitive research",
+        },
         heading: "10. Sensitive research and anonymous tips",
         paragraphs: [
           "Journalists, researchers, whistleblowers, and ordinary citizens sometimes need to contact organizations without revealing their identity — reporting misconduct, asking sensitive health questions, or contacting support about a stigmatized issue. A disposable address provides a working return channel with no identity attached, which is often the difference between asking the question and staying silent.",
@@ -221,6 +233,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 6,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/6458059/pexels-photo-6458059.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Smartphone showing a privacy policy update, the kind of notice a real inbox accumulates",
+        },
         paragraphs: [
           "Privacy advice usually comes in two flavors: paranoid or useless. Using temporary email is neither — it is one of the few privacy habits that is both effective and effortless. This guide shows how disposable addresses fit into a realistic privacy setup: what they protect, what they do not, and the mistakes that undo their benefits.",
         ],
@@ -249,6 +265,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5243610/pexels-photo-5243610.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Person using a privacy tool on a laptop for secure browsing",
+        },
         heading: "Common mistakes that undo the benefits",
         paragraphs: [
           "The biggest mistake is using a temporary address for something you will need later — then losing access to [password resets](/blog/how-to-use-temp-mail-for-password-resets) when the inbox expires. The dividing question from our [beginner's guide](/blog/what-is-temporary-email) applies: if losing the address tomorrow locks you out of something you care about, it was never a tier-three signup.",
@@ -273,6 +293,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/3949101/pexels-photo-3949101.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Tablet showing a secure VPN connection, one layer of a tiered privacy setup",
+        },
         heading: "How the tools reinforce each other",
         paragraphs: [
           "Temp mail is strongest as part of a small toolkit, not a solo act. Pair it with a password manager and every disposable signup also gets a unique, unguessable password — so even if a temp address somehow persists somewhere, there is no credential to stuff. Add two-factor authentication on your tier-one accounts and the accounts that matter are hardened while the throwaway ones were never worth attacking.",
@@ -305,6 +329,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 6,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/5668484/pexels-photo-5668484.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Judge's gavel beside case folders in a courthouse, representing the law around disposable email",
+        },
         paragraphs: [
           "One of the most common questions about disposable email is also one of the simplest to answer: yes, using a temporary email address is legal. There is no law in the US, the EU, the UK, or Pakistan that makes it a crime to receive email at an address you created for short-term use. Temp mail is a tool, and like any tool, what matters is what you do with it.",
           "The confusion usually comes from mixing up two different things: the address itself, which is legally neutral, and the behavior around it, which is where rules — legal or otherwise — can kick in. This guide separates the two clearly.",
@@ -342,6 +370,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Gavel striking a sound block, symbolizing legal authority and court rulings",
+        },
         heading: "How to stay comfortably legal",
         paragraphs: [
           "Use temp mail for what it is for: one-off signups, download gates, free trials you are genuinely evaluating, testing, and [the practical situations in our playbook](/blog/smart-ways-to-use-disposable-email). Do not use it to dodge bans, deceive people, or hide wrongdoing.",
@@ -364,6 +396,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Scales of justice and a small gavel, representing real legal cases and prosecutions",
+        },
         heading: "Real cases: what actually gets prosecuted",
         paragraphs: [
           "To calibrate the real risk, look at what prosecutors actually pursue. Cases involving disposable email invariably center on the underlying crime: phishing campaigns that stole credentials, harassment carried out across multiple fake accounts, fraud schemes using false identities. In every such case, the disposable address was evidence of intent to conceal — an aggravating detail, not the charge itself.",
@@ -398,6 +434,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 6,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/193003/pexels-photo-193003.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Smartphone showing Google and Mail apps, where Gmail alias tricks live",
+        },
         paragraphs: [
           "Gmail users have two famous tricks for managing signups: dots and plus-addressing. Write your address as first.last@gmail.com or firstlast+shopping@gmail.com, and mail still reaches you — while you get to filter or trace where spam came from. They feel like privacy tools. The uncomfortable question is whether they actually protect anything. This guide compares aliases against true disposable email honestly, so you can stop guessing and start using the right tool for each job.",
         ],
@@ -435,6 +475,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5744250/pexels-photo-5744250.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Close-up of a smartphone email inbox, the thing aliases try to organize",
+        },
         heading: "The decision framework",
         paragraphs: [
           "When a form asks for your email, run this thirty-second check. Will I need this account in a year? Yes → real address, possibly with a plus-tag for filtering. Is this a [one-time interaction](/blog/smart-ways-to-use-disposable-email) I will forget by Friday? → temp mail. Am I testing, sampling, or just curious? → temp mail. Is money, identity, or recovery involved? → real address, no exceptions.",
@@ -457,6 +501,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5483248/pexels-photo-5483248.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Laptop displaying cybersecurity text, representing how alias patterns can be correlated back to one identity",
+        },
         heading: "Correlation attacks: how aliases leak and temp mail does not",
         paragraphs: [
           "Consider what happens when two different sites are breached. With Gmail aliases, both breaches contain addresses trivially reducible to the same root — you+siteA@gmail.com and you+siteB@gmail.com are obviously the same person to any analyst, human or automated. The alias protected you from nothing except the most naive correlation; it was a labeling system, not a privacy system.",
@@ -581,6 +629,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 8,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/8284722/pexels-photo-8284722.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Laptop with a messaging app, glasses and coffee, a typical session comparing temporary email services",
+        },
         paragraphs: [
           "Not all temporary email services are the same. Some delete messages after ten minutes, others keep them for days. Some let you pick a custom address, others hand you a random string you cannot remember. A few quietly require accounts or push premium tiers, while others stay genuinely free. This guide compares the eight best temp mail sites in 2026 on the criteria that actually matter, so you can pick the right one in under two minutes.",
           "Quick answer: Temp Mail (tempmaill.tech) is the best all-rounder for 2026 — free, no signup, custom address prefixes, and inboxes that auto-delete after one hour. Read on for the full comparison and the reasoning behind the pick.",
@@ -630,6 +682,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/2061168/pexels-photo-2061168.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Detailed view of programming code on a computer screen, representing developer-focused email services",
+        },
         heading: "6. Mailinator — best for developers",
         paragraphs: [
           "Mailinator lets you use any address @mailinator.com without setup — just invent one and check its public inbox. That makes it the favorite for developers testing signup flows: no generation step at all. The tradeoff is total: every inbox is fully public, anyone can read anything, and addresses on the free tier are well-known enough to be blocked or indexed.",
@@ -658,6 +714,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5829726/pexels-photo-5829726.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hooded figure working remotely on a laptop, a reminder to vet unknown email services carefully",
+        },
         heading: "Red flags to avoid in any temp-mail service",
         paragraphs: [
           "Not every disposable email site deserves your clicks. Avoid services that require signup to generate an address — that defeats the entire purpose. Avoid ones plastered with deceptive download buttons or that ask for personal details. Be wary of services that never delete anything: permanence in a disposable inbox is a contradiction that usually means your 'temporary' mail is being kept for someone else's benefit. And if a service cannot tell you plainly how long messages are kept, assume the answer is 'longer than you would like.'",
@@ -698,6 +758,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 6,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/927629/pexels-photo-927629.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Laptop displaying a Facebook login page, the signup this guide walks through",
+        },
         paragraphs: [
           "Using a temporary email for Facebook signup is one of the most common reasons people reach for a disposable address. Maybe you want a second account for a marketplace side project, a test profile for development work, or simply a way to try Facebook without handing Meta your primary inbox. The good news: it can work. The honest news: Facebook is one of the strictest platforms when it comes to disposable domains, so success depends on how you do it.",
           "This guide walks through the process step by step, explains why some throwaway addresses get rejected at signup, and shows the practical workarounds — so you do not burn three addresses before your first login.",
@@ -727,6 +791,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5426403/pexels-photo-5426403.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Macro shot of smartphone app icons including Mail and Instagram, the apps tied to a social account",
+        },
         heading: "The tradeoff: recovery and notifications",
         paragraphs: [
           "Even when the signup works, think about what happens next. Facebook sends friend suggestions, group digests, marketplace alerts, and security emails to whatever address is on the account. With a temporary email for Facebook signup, those messages die with the inbox — which is exactly the privacy win you are after. No notification avalanche, no 'people you may know' digest cluttering your real mail.",
@@ -755,6 +823,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5744249/pexels-photo-5744249.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hand holding a smartphone with an email app open, where Facebook recovery messages would arrive",
+        },
         heading: "The recovery trap: why Facebook + temp mail is risky long-term",
         paragraphs: [
           "Here is the critical warning most guides bury: Facebook accounts get locked. It happens for mundane reasons — logging in from a new country, a password typo streak, a false-positive from automated moderation — and when it happens, Facebook's recovery flow sends verification to the registered email. If that email was a temp address that expired months ago, you have no recovery path.",
@@ -781,6 +853,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 5,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/4397906/pexels-photo-4397906.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Amber and transparent hourglasses, representing the ten-minute countdown of disposable inboxes",
+        },
         paragraphs: [
           "If you are weighing up 10 Minute Mail vs Guerrilla Mail, you are comparing the two [most famous names in disposable email](/blog/best-temporary-email-sites-2026). Both hand you a free throwaway inbox in seconds with no signup — but they take very different approaches to how long the inbox lives, how much control you get over the address, and what happens to your messages afterward.",
           "This 10 minute mail vs guerrilla mail comparison walks through lifespan, privacy, features, and ease of use — with a third option thrown in — so you can pick the right one in under a minute.",
@@ -809,6 +885,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7054727/pexels-photo-7054727.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Wooden mail organizer with white envelopes, a calmer alternative to countdown inboxes",
+        },
         heading: "A third option: Temp Mail",
         paragraphs: [
           "There is a middle ground between the ten-minute fuse and the feature-heavy classic. Temp Mail (tempmaill.tech) opens with a random address ready to use — no signup, no countdown anxiety — and keeps the inbox live for a full 60 minutes with real-time refresh, so verification codes land within seconds.",
@@ -832,6 +912,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/19107334/pexels-photo-19107334.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Wall of metal mailboxes stuffed with newspapers, representing deliverability across shared inboxes",
+        },
         heading: "Deliverability and block rates: the hidden scorecard",
         paragraphs: [
           "The comparison most reviews skip is the one that determines whether the service works at all: how often do target sites accept these domains? Both services are veterans — 10MinuteMail dates to the mid-2000s, Guerrilla Mail to a similar era — which means their domains are among the most widely blocklisted in existence. Every major platform's disposable-domain filter knows them by heart.",
@@ -866,6 +950,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 5,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/7430701/pexels-photo-7430701.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Collection of red envelopes around a subscribe card, representing the marketing mail that becomes spam",
+        },
         paragraphs: [
           "Hit 'unsubscribe' and the emails keep coming. Or worse \u2014 the link was fake, and clicking it just confirmed to the spammer that your address is real and watched. If that sounds familiar, here is how to stop spam emails without unsubscribing: cut off the supply of your address at the source, starve the senders who already have it, and build a setup where junk mail has nowhere to land. None of this needs an unsubscribe link to cooperate.",
           "The shift is simple. Instead of asking senders to stop \u2014 and hoping they listen \u2014 you make your real address invisible to them in the first place. Here is the full playbook.",
@@ -900,6 +988,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/4922070/pexels-photo-4922070.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Leather box stamped E MAIL on a gray surface, representing the business of bulk email",
+        },
         heading: "Why spammers ignore unsubscribes (the business model)",
         paragraphs: [
           "To understand why unsubscribing fails, follow the money. Legitimate marketers honor unsubscribes because their business depends on deliverability reputation — every spam complaint hurts their sender score with Gmail and Outlook. But outright spammers operate on a different economy: they buy or harvest address lists in bulk, blast from disposable infrastructure, and measure success in fractions of a percent. For them, an unsubscribe click is not a removal request; it is confirmation that the address is live, monitored, and worth emailing more.",
@@ -924,6 +1016,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/11455225/pexels-photo-11455225.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Open residential mailbox full of mail, the end state of an address overrun by spam",
+        },
         heading: "The nuclear options: when spam will not stop",
         paragraphs: [
           "For truly intractable spam — the kind that survives filters, unsubscribes, and complaints — stronger measures exist. Address rotation is the most effective: if a Gmail alias is irreparably compromised, abandon it. Create a new alias for that service (or route it through temp mail going forward) and filter the old one straight to trash. The spammer keeps emailing a dead identifier; you never see it.",
@@ -949,6 +1045,10 @@ export const POSTS: BlogPost[] = [
       readMinutes: 9,
       content: [
         {
+                image: {
+                  src: "https://images.pexels.com/photos/8284724/pexels-photo-8284724.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  alt: "Woman typing on a laptop with a messaging app, where forwarded alias mail arrives",
+                },
                 paragraphs: [
                   "Search for burner email vs temp mail and you will find people using the two terms as if they mean the same thing. They do not — not even close. A burner email is a forwarding alias: it looks like a separate address, but every message it receives is forwarded straight into your real inbox. A temp mail address is a standalone, self-destructing inbox with no real address behind it at all. Same use case on the surface — keeping your real email address out of strangers' databases — but completely different machinery underneath, and that difference decides which one you should reach for.",
                   "This matters because picking the wrong one costs you in exactly the ways you were trying to avoid. Use a burner alias where a true throwaway belonged, and your real inbox still collects the spam you thought you dodged. Use temp mail where a persistent alias belonged, and you get locked out of an account when its password-reset email arrives an hour after the inbox died. The average internet user now juggles well over 100 online accounts, so this is not an edge-case decision — it is one you make constantly, usually without thinking. Here is the full breakdown, so you can think it through once and then stop worrying about it.",
@@ -971,6 +1071,10 @@ export const POSTS: BlogPost[] = [
                 ],
               },
         {
+                image: {
+                  src: "https://images.pexels.com/photos/37977981/pexels-photo-37977981.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  alt: "Modern mailbox unit on a blue wall, representing the permanent mailbox behind a burner alias",
+                },
                 heading: "Head to head: six differences that actually matter",
                 paragraphs: [
                   "First, where the mail lands. Burner aliases forward into your real inbox, which means every message is searchable, archived, and protected by your provider's spam filters and security. Temp mail keeps mail quarantined in a separate, temporary inbox that auto-deletes — perfect isolation, zero history. If you might ever need to find that email again in six months, forwarding wins by a mile.",
@@ -998,6 +1102,10 @@ export const POSTS: BlogPost[] = [
                 ],
               },
         {
+                image: {
+                  src: "https://images.pexels.com/photos/4939604/pexels-photo-4939604.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  alt: "Person typing on a laptop at home, setting up a tiered inbox system",
+                },
                 heading: "The smart play: use both in a three-tier system",
                 paragraphs: [
                   "The burner email vs temp mail debate has a boring but correct answer: they are not competitors, they are different tiers of the same system. The setup that actually works long-term has three levels, and it takes about an hour to build. Tier one is your real address — reserved for banking, government services, work, and the handful of accounts where identity verification matters. Fewer than twenty senders should ever see this address.",
@@ -1024,6 +1132,10 @@ export const POSTS: BlogPost[] = [
       readMinutes: 8,
       content: [
         {
+                image: {
+                  src: "https://images.pexels.com/photos/8972769/pexels-photo-8972769.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  alt: "Popcorn bowl beside a laptop set up for a movie night, the classic streaming free trial",
+                },
                 paragraphs: [
                   "Almost every free trial starts the same way: a box demanding your email before you have seen a single screen of the product. Type in your real address and you have just paid for that “free” trial with something worth more than the subscription itself — a verified, human-read inbox that can be marketed to for years. Here is how to use temp mail for free trials instead: spin up a disposable inbox that receives the activation link, lets you test the product properly, and then destroys itself, taking your address with it.",
                   "This guide is the practical version — not just the theory, but the exact method, the numbers behind why it matters, where it breaks down (because it does break down sometimes), and a three-tier strategy that keeps you from ever losing an account you actually care about. If you already know the basics, our [comparison of temp mail and your real inbox](/blog/temporary-email-vs-real-inbox-privacy) covers the broader privacy picture.",
@@ -1047,6 +1159,10 @@ export const POSTS: BlogPost[] = [
                 ],
               },
         {
+                image: {
+                  src: "https://images.pexels.com/photos/7191172/pexels-photo-7191172.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  alt: "Laptop displaying a checkout form, where free trials ask for an email first",
+                },
                 heading: "Which free trials accept temp mail — and which block it",
                 paragraphs: [
                   "Not every trial form will take a disposable address, and the pattern is predictable. Email-only trials — desktop software, browser extensions, newsletter paywalls, one-off download gates, mobile apps that verify by email code — accept temp mail nearly every time. Their verification logic checks that the address exists and can receive mail, which a live temp inbox satisfies completely. Wi-Fi portals, contest entries, and discount-code popups are in the same category: the business wants a reachable address for the next five minutes, and temp mail is a real, reachable address for exactly that long.",
@@ -1071,6 +1187,10 @@ export const POSTS: BlogPost[] = [
                 ],
               },
         {
+                image: {
+                  src: "https://images.pexels.com/photos/6235456/pexels-photo-6235456.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  alt: "Two people watching a streaming service on a laptop in a cozy room, a trial worth keeping safe",
+                },
                 heading: "The safer playbook: a three-address trial strategy",
                 paragraphs: [
                   "The setup that works long-term is not one address but three, matched to how serious the trial is. Tier one — your real address — is for trials you expect to become subscriptions: the tools your business runs on, services tied to billing, anything where you need receipts and renewal notices for years. Fewer than a dozen companies should ever hold this address.",
@@ -1099,6 +1219,10 @@ export const POSTS: BlogPost[] = [
       readMinutes: 9,
       content: [
         {
+          image: {
+            src: "https://images.pexels.com/photos/7568298/pexels-photo-7568298.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            alt: "Close-up of an email app icon on a smartphone screen, where Hide My Email aliases are created",
+          },
           paragraphs: [
             "If you live in the Apple ecosystem, iCloud's Hide My Email looks like the only throwaway email you'll ever need: one tap in Safari generates a random alias, spam bounces off it, and everything forwards neatly to your real inbox. If you don't own an iPhone, a free instant inbox looks like the same trick with a different logo. That confusion is exactly why the temp mail vs iCloud Hide My Email debate keeps coming up — and why most answers get it wrong. They look alike on the surface and they were built for opposite jobs.",
             "Here is the one-sentence version before we dig in: Hide My Email is a permanent forwarding alias tied to your Apple ID, designed for accounts you intend to keep. Temp mail is a standalone inbox that self-destructs, designed for signups you never want to think about again. Pick the wrong one and you pay in the currency you were trying to protect — your time. Use temp mail for an account you need next year and you get locked out when the password reset goes nowhere. Use Hide My Email for a one-off download and your real inbox collects spam for the next decade. This guide walks through the mechanics, the money, the OTP behavior, and the recovery trap so you can make the right call in about ten seconds, every time.",
@@ -1129,6 +1253,10 @@ export const POSTS: BlogPost[] = [
           ],
         },
         {
+          image: {
+            src: "https://images.pexels.com/photos/7343000/pexels-photo-7343000.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            alt: "Hands typing on a smartphone touch screen as a verification code arrives",
+          },
           heading: "OTP and verification codes: where each one breaks",
           paragraphs: [
             "Both tools receive one-time passcodes, but they fail in different places. Hide My Email's weakness is latency and policy: the code travels from the site to Apple's relay and then to your inbox, and on a slow day that extra hop can eat a meaningful chunk of a 5-minute code window. More importantly, some financial services explicitly refuse to send sensitive codes to relay or alias addresses. Temp mail's weakness is the clock: the inbox lives for an hour, so if the code arrives late — or you get distracted and the session expires — the address is gone and there is no 'resend to the same address' because the address no longer exists.",
@@ -1153,6 +1281,10 @@ export const POSTS: BlogPost[] = [
           ],
         },
         {
+          image: {
+            src: "https://images.pexels.com/photos/4489171/pexels-photo-4489171.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            alt: "Hand holding a smartphone with a laptop behind it, choosing between alias and disposable tools",
+          },
           heading: "Your decision rule: which one to reach for",
           paragraphs: [
             "After all the mechanics, the actual decision takes three questions and about ten seconds. Question one: will I need this account in six months? If yes, Hide My Email (or your real address for anything money-adjacent). If no, temp mail. Question two: do I need to receive mail from this sender after today? Newsletters, order tracking, and anything with a 'we'll email your receipt' step need a persistent alias; a download link or a single verification code does not. Question three: am I on an Apple device right now? If you're on Windows, Android, or a borrowed machine, Hide My Email isn't even an option — temp mail is.",
@@ -1179,6 +1311,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 8,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/4101343/pexels-photo-4101343.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Clipboard with a resume beside a pen and laptop, ready for a job application",
+        },
         paragraphs: [
           "Your resume is a sales pitch. Your email address is a liability. Every job application you submit asks for your email — and once you hand it over, it leaves your control completely. Job boards pipe it into their CRMs, staffing agencies add it to mailing lists that outlive the vacancy by years, and applicant tracking systems keep it on file long after someone else got the job. A temporary email for job applications lets you keep the callback channel open while closing the spam channel permanently. Here is how the system actually works — and how to use it without missing a single opportunity.",
           "Start with the scale of the problem. A serious job search runs 80 to 150 applications over three to six months. Each one is a separate company, a separate ATS, a separate database entry. If even a quarter of them share your details with a partner — a background-check vendor, a staffing aggregator, a 'talent community' newsletter — your personal address ends up in dozens of systems you never signed up for, most of which will email you about jobs you never applied to for the next two years. Your resume gets read for six seconds; your email gets kept for six years.",
@@ -1209,6 +1345,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7709273/pexels-photo-7709273.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Computer screen with an open contact form, like the ones on job portals",
+        },
         heading: "The OTP problem on job portals",
         paragraphs: [
           "Most job boards require email verification before you can apply — a one-time code or a confirmation link sent within seconds of signup. This is exactly what disposable inboxes are built for: messages arrive in real time, usually under ten seconds, and the code works the same as it would in Gmail. We tested the pattern in detail in our article on [whether temp mail is safe for OTP codes](/blog/is-temp-mail-safe-for-otp) — the short version is that receive-only verification is temp mail's home turf.",
@@ -1225,6 +1365,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Applicant filling in a job questionnaire in an employer's office",
+        },
         heading: "What job seekers get wrong about throwaway addresses",
         paragraphs: [
           "Myth one: temp mail is only for sketchy signups. In reality, developers use it for [testing signup flows](/blog/smart-ways-to-use-disposable-email), shoppers use it for discount codes, and privacy-conscious professionals use it exactly for situations like job hunting — anywhere a working inbox is required but a permanent identity is not. There is nothing deceptive about it; the address receives mail perfectly well.",
@@ -1251,6 +1395,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 8,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/1083931/pexels-photo-1083931.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Person texting on a smartphone outdoors, where a disposable email app earns its keep",
+        },
         paragraphs: [
           "Here is a scenario every phone owner knows: you are standing in a store, the cashier wants an email for the receipt or the loyalty discount, and your only options are your real inbox or a lie. The best disposable email apps of 2026 solve this in under ten seconds — you open the app, copy a fresh address, and the verification code lands as a push notification before the cashier finishes the transaction. No browser tab, no signup form, no 'I will unsubscribe later' promise you will never keep.",
           "A temporary email website works fine at your desk, but your phone is where disposable addresses actually earn their keep — app signups, QR-code loyalty programs, free Wi-Fi portals at airports, conference badge scans, and every 'sign in with email to continue' wall inside a mobile app. The app versions promise one-tap addresses and instant notifications, and the differences between them turn out to be bigger than the Play Store ratings suggest. We installed the seven most-downloaded disposable email apps for Android and iPhone, generated addresses in each, signed up for the same set of services, and measured what actually matters: how fast codes arrive, how long the inbox survives, what the app collects about you, and how aggressively it monetizes the free tier.",
@@ -1285,6 +1433,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/8573370/pexels-photo-8573370.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Minimalist hourglass, representing the inbox lifetimes that separate disposable email apps",
+        },
         heading: "Inbox lifetime vs. convenience: the trade-off math",
         paragraphs: [
           "The central tension in this whole category is how long an address should live. Ten minutes is maximally private — nothing to leak, nothing to manage — but it fails the 'second email' test. A persistent address tied to your app installation is maximally convenient but slowly becomes an identity: reuse it across fifty services and you have rebuilt the very profile you were trying to avoid, just on a weirder domain.",
@@ -1301,6 +1453,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7120127/pexels-photo-7120127.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Smartphone with a messaging app displayed, one of the everyday apps a disposable inbox supports",
+        },
         heading: "Our picks by use case",
         paragraphs: [
           "Fastest codes, least fuss: Temp Mail (temp-mail.io). If you want one app that just works — open, copy, code arrives in seconds — this is it. The ad load is the price, and it is a fair one.",
@@ -1330,6 +1486,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 12,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/4973899/pexels-photo-4973899.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Laptop displaying a security lock icon, representing a password reset in progress",
+        },
         paragraphs: [
           "Learning how to use temp mail for password resets starts with admitting an uncomfortable truth: most disposable-email advice stops at signup. Every guide tells you to burn a throwaway address on the registration form and walk away — and for the signup itself, that works perfectly. The problem arrives weeks later, when you click Forgot password and the reset link goes to an inbox that expired an hour after you created it. In our own testing across a dozen services, this is the single most common way people lose accounts they registered with temporary email — not hackers, not blocklists, just the clock.",
           "This guide fixes that. You will learn a small system — a five-minute setup at signup plus a one-line record you keep — that makes password resets work reliably on disposable addresses, and you will learn exactly where the line sits: the categories of accounts where temp mail should never touch the recovery flow. It builds on the same tiered-inbox thinking in our guide to [seven practical ways to use a disposable address](/blog/smart-ways-to-use-disposable-email), but it solves the harder half of the problem: getting back in.",
@@ -1362,6 +1522,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5530195/pexels-photo-5530195.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Person using a secured laptop in a modern office while resetting an account password",
+        },
         heading: "Blocklists check the reset form too",
         paragraphs: [
           "Most people assume the disposable-domain blocklist only guards the front door — the signup form. In practice, many services run the same check, or a stricter one, on the password-reset form. The logic from their side is straightforward: password resets are a favorite vector for account-takeover attempts, so the reset endpoint often gets the more paranoid validation. We have seen services that happily accepted a temp address at registration and then silently refused to send reset emails to it — no error message, just an if-an-account-exists-we-have-sent-an-email page and an inbox that stays empty.",
@@ -1378,6 +1542,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/3949100/pexels-photo-3949100.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Woman working on a laptop with a security icon on screen, protecting an account worth keeping",
+        },
         heading: "When to never use temp mail for password resets",
         paragraphs: [
           "The method above works for the ninety percent of accounts that do not deserve your real identity. The remaining ten percent — the accounts that protect your money, your identity, or your livelihood — should never touch a disposable address at all, neither at signup nor at recovery. Banks, brokerages, crypto exchanges, your primary email account, government services, and anything that can move money or prove who you are belong on your real address, ideally behind a password manager and two-factor authentication. Our guide on [whether temp mail is safe for OTP codes](/blog/is-temp-mail-safe-for-otp) draws this line in detail; the short version is that recovery codes for high-stakes accounts are the worst possible use of an inbox designed to disappear.",
@@ -1498,6 +1666,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 9,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/6669776/pexels-photo-6669776.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hand beside a smartphone showing a message conversation that has not updated yet",
+        },
         paragraphs: [
           "You click 'send code', switch to your temp inbox, and… nothing. The spinner stops, the site insists the email was sent, and your temp mail is not receiving emails. Before you blame the inbox, know this: in nearly every case the inbox is fine. The email never left the sender, was refused at the door, or is sitting in a retry queue waiting out a spam filter's suspicion.",
           "Temporary email inboxes are deliberately simple — they accept almost everything addressed to them. That simplicity makes them the most reliable part of the chain, and the least likely culprit. What follows is the diagnostic order that support teams and developers actually use: nine fixes, ordered from most common to least, that resolve the problem in minutes. Work them in order and you will know exactly where your email went.",
@@ -1552,6 +1724,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/11069123/pexels-photo-11069123.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Classic hourglass with trickling sand against a dark background, representing an expired inbox",
+        },
         heading: "Fix 6: Check whether the inbox already expired",
         paragraphs: [
           "Temp inboxes have a lifespan — on this service, one hour from creation, with all mail auto-deleted at expiry. If you generated the address, got distracted, and came back forty minutes later to finish the signup, you may be watching a corpse: the page still renders, but the address no longer accepts mail, and anything sent to it bounces or vanishes.",
@@ -1575,6 +1751,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/5386485/pexels-photo-5386485.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "High-angle view of hands typing on a laptop, working through inbox fixes",
+        },
         heading: "Fix 9: Switch the domain, not the whole service",
         paragraphs: [
           "When every fix fails, the instinct is to blame the provider and switch services. Try the cheaper move first: switch domains within the same service. Disposable providers operate multiple domains — on Temp Mail you might see @abahi.tech, @abahi.page, and @abahi.me — and blocklists, greylisting history, and sender reputation are all per-domain. A domain that one site blocks may be unknown to that site's filters under a different suffix, while your workflow, bookmarks, and habits stay exactly the same.",
@@ -1612,6 +1792,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 11,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/9862247/pexels-photo-9862247.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Classic hourglass on a rustic wooden table, representing the original ten-minute inbox timer",
+        },
         paragraphs: [
           "If you have ever watched a 10-minute countdown kill your inbox thirty seconds before the verification email arrived, you already know why people search for 10 minute mail alternatives. The idea is brilliant — a disposable address that self-destructs in ten minutes, no signup required — but the execution has a brutal failure mode: modern signup flows rarely finish in ten minutes. Between SMS two-factor prompts, “resend code” throttles, captchas, and pages that make you verify your phone first and your email second, the clock runs out mid-flow — and the code you were waiting for lands in an inbox that no longer exists.",
           "So we tested ten replacements — free, no-signup disposable inboxes with longer lifespans, refreshable addresses, and domains that survive blocklists — on what actually matters: how fast mail arrives, how long the inbox lives, whether you can extend the timer, and whether the address works on real signup forms. Each service was scored out of 100 on a published rubric, and yes, our own Temp Mail inbox is in the list, scored with the same ruler as everyone else. Here are the 10 best 10 minute mail alternatives in 2026, ranked by the numbers.",
@@ -1656,6 +1840,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7439135/pexels-photo-7439135.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Close-up of a laptop screen showing a web form, the signup each alternative must survive",
+        },
         heading: "Which alternative fits your actual signup",
         paragraphs: [
           "Rankings are abstract; signups are not. Here is the pick by situation, because the right answer changes with the flow. Chasing a verification code right now: take the fastest inbox with the longest runway — Temp Mail's one-hour, sub-two-second delivery on the [homepage](/) — and keep our [missing-mail diagnostic](/blog/temp-mail-not-receiving-emails) open in the next tab in case the code stalls. If the code is an [OTP for something that matters](/blog/is-temp-mail-safe-for-otp), read the safety guide first: some codes should never go to any disposable address.",
@@ -1672,6 +1860,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7954873/pexels-photo-7954873.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Woman attentively observing an hourglass, weighing a switch between inbox services",
+        },
         heading: "Two traps to avoid when switching",
         paragraphs: [
           "Trap one: forwarders that ask for your real address first. A few services on the edge of this category will give you a “disposable” address only after you hand over the address it should forward to — which is like buying a mask by showing your ID. If the service holds your real address, every privacy benefit of disposable mail now depends on trusting that service forever, and their privacy policies are rarely reassuring reading. True disposable inboxes — everything in the top half of our table — never ask who you are. If a signup form appears before the inbox does, close the tab.",
@@ -1696,6 +1888,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 8,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/6415626/pexels-photo-6415626.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hand holding a smartphone with a messaging app open, moments after a signup form rejected an address",
+        },
         paragraphs: [
           "You paste a fresh disposable address into a signup form, click submit — and the form shakes its head: “This email address is not allowed.” So can websites detect temp mail? Yes, they can — and most large sites do it automatically, in the fraction of a second between your click and the page reloading. But detection is not one trick. It is a layered system of blocklists, DNS checks, domain-age scoring, and risk APIs, and understanding those layers is the difference between getting silently rejected and sailing through verification on the first try.",
           "This is one of the web’s quieter arms races. On one side sit open-source blocklist projects cataloging tens of thousands of throwaway domains, maintained like antivirus definitions and refreshed constantly, plus commercial email-validation APIs — the same ones checkouts use to catch typos — that ship disposable-domain detection as a standard checkbox, frequently enabled by default. On the other side sit temp-mail services rotating through fresh domains to stay ahead. If you have ever wondered why an address that worked last month gets rejected today, this arms race is the reason.",
@@ -1730,6 +1926,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7439124/pexels-photo-7439124.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Businesswoman typing on a laptop, working through a blocked signup",
+        },
         heading: "Three rejection scenarios you’ll actually run into",
         paragraphs: [
           "Scenario one: the instant form error. You submit, the page reloads, and a red line says “please enter a valid email address.” Nothing was sent anywhere — the domain hit a blocklist during validation and the signup never started. This is the most common pattern and the easiest to fix: switch to a different domain or service and try again. On Temp Mail you get three to choose from — @abahi.tech, @abahi.page, and @abahi.me — and a domain flagged on one site is very often clean on the next, because blocklists catalog domains unevenly.",
@@ -1746,6 +1946,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/30901560/pexels-photo-30901560.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Wooden tiles spelling CYBERSEC, representing the detection systems that also block fraud",
+        },
         heading: "When detection is actually on your side",
         paragraphs: [
           "Blocking disposable addresses isn’t pure villainy, and it’s worth saying so on a temp-mail blog. For banks, brokerages, and anywhere money moves, rejecting throwaway addresses is a genuine anti-fraud measure — it raises the cost of spinning up fake accounts for scams and phishing. If a site handling your money accepts a one-hour inbox without blinking, that is arguably a red flag about the site, not a win for you.",
@@ -1769,6 +1973,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 9,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/6284359/pexels-photo-6284359.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Overhead view of a freelancer using a laptop touchpad, comparing email privacy tools",
+        },
         paragraphs: [
           "There is a signup form in front of you — a free ebook, a forum account, a discount code that expires tonight. It wants your email address, and your real inbox is the last place that address should end up. Two tools promise to stand between you and the form: Mozilla's Firefox Relay, which hands out alias masks that forward to your real inbox, and true temp mail, which gives you an inbox that lives for an hour and then deletes itself. The temp mail vs firefox relay question looks like a product choice, but it is really a question about what kind of privacy you need: a permanent shield you manage, or a disposable one you never think about again.",
           "They are built on opposite philosophies. Relay is an alias service — every mask points at your real address through Mozilla's servers, and the relationship lasts until you kill the mask. Temp mail is an amnesiac — no account, no forwarding, no history, just a working inbox with a countdown timer. Both hide your real address from the sender. Everything else about them diverges: cost, speed, what the provider itself can see, and what happens when the site you signed up for gets breached six months later.",
@@ -1810,6 +2018,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/9902413/pexels-photo-9902413.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Person texting on a smartphone as a verification code arrives",
+        },
         heading: "OTP codes and verification emails: where each one breaks",
         paragraphs: [
           "Both services receive one-time passwords just fine in the common case — a mask forwards the code, a temp inbox displays it — and for low-stakes verifications (confirm this forum account, verify this download) either works. The divergence is durability. A Relay mask still exists when the site asks you to re-verify in three months; a temp-mail address does not. Our [OTP safety guide](/blog/is-temp-mail-safe-for-otp) draws the line precisely: one-time verification on a throwaway account is a temp-mail job, anything with an account you might need to recover is not.",
@@ -1834,6 +2046,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/2048774/pexels-photo-2048774.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hands using a privacy app on a smartphone, the final step in choosing between Relay and temp mail",
+        },
         heading: "The 60-second decision matrix",
         paragraphs: [
           "One-off download, free trial, discount code, Wi-Fi portal, survey, beta signup you will never open again — temp mail. The address needs to live for exactly one verification email, and then it should die. Nothing else is this fast or this free.",
@@ -1860,6 +2076,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 10,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/3943951/pexels-photo-3943951.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Person using a smartphone for messaging, where tracker-free forwarded mail arrives",
+        },
         paragraphs: [
           "The DuckDuckGo Email Protection vs Temp Mail question lands in your lap the moment a signup form demands your email and you refuse to hand over the real thing. One tool promises to scrub trackers out of your email and forward what is left to your real inbox; the other hands you an address that self-destructs in sixty minutes. They look like rival answers to the same problem, but they are answers to two different problems — and picking the wrong one either leaves trackers swimming in your inbox or strands an account you actually needed.",
           "DuckDuckGo's pitch is the clean forward. You get a free @duck.com address — one personal address you choose, plus unlimited private aliases you generate per site — and every message sent to them gets its known trackers stripped before DuckDuckGo forwards it to the real inbox you already use. Temp mail's pitch is the amnesiac inbox: no account, no forwarding, no history. Open the page and an address like bright.fox412@abahi.tech is already waiting, and sixty minutes after you walk away the address and every message in it are gone. Both hide your real address from the sender. Everything else about them diverges: what the provider knows, what a tracker learns, what survives a breach, and what it costs you in setup and upkeep.",
@@ -1890,6 +2110,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/38482447/pexels-photo-38482447.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Wooden blocks spelling Cyber Security, representing the identity question behind email forwarding",
+        },
         heading: "The identity problem: one permanent address vs an address that dies",
         paragraphs: [
           "Your Personal Duck Address is a stable public identifier, and stable identifiers are exactly what data brokers feast on. Hand yourname@duck.com to forty services and a single breach lets anyone join your rows across databases — the address is the join key. Private Duck Addresses fix this, but only if you actually use a fresh one per site; the browser's auto-fill makes that nearly effortless, while manual users default to typing the memorable personal address everywhere, recreating the exact problem the tool was built to solve.",
@@ -1914,6 +2138,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/2070069/pexels-photo-2070069.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Tablet displaying a connected privacy app, part of a tracker-blocking setup",
+        },
         heading: "The 60-second decision matrix",
         paragraphs: [
           "One-off download, free trial, discount code, Wi-Fi portal, survey, beta signup you will never open again — temp mail. The address needs to live for exactly one verification email, then die. Nothing else is this fast or this free.",
@@ -1941,6 +2169,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 12,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/7653982/pexels-photo-7653982.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hands typing on a laptop at a desk with documents, setting up email aliases",
+        },
         paragraphs: [
           "The simplelogin vs temp mail question comes up constantly in privacy forums, and it is almost always asked the wrong way. People compare feature lists — unlimited aliases versus instant inboxes, custom domains versus no signup — and walk away more confused than they started. The real question is simpler and stranger: do you want a mask you keep wearing, or a mask you burn after one use? Because that is what this comparison actually is. SimpleLogin gives you email aliases that forward to your real inbox and stay alive as long as you want them. Temp mail gives you a working inbox that self-destructs in about an hour. Same starting problem — stop handing your real address to every website with a signup form — solved from opposite ends of permanence.",
           "I have used both for years, for everything from newsletter triage to QA-testing signup flows, and the honest answer is that neither one wins outright. They win different games. This guide breaks down what each tool actually does, runs them through a seven-round head-to-head with real numbers — setup time, pricing tiers, reply capability, blocklist rates — and ends with the one decision rule that makes the choice obvious every single time.",
@@ -1977,6 +2209,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/16841808/pexels-photo-16841808.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hands holding a smartphone with a messaging app, an identity-linked device behind every alias",
+        },
         heading: "The anonymity gap: what forwarding can never hide",
         paragraphs: [
           "This deserves its own section because it is the subtlest point in the whole debate. When you use a SimpleLogin alias, the website you signed up for cannot see your real address — true. But your alias is permanently wired to your real inbox, which means every message you receive through it still ends up in the same mailbox, on the same provider, under the same identity. If that provider is ever breached, subpoenaed, or simply data-mined, the alias offers no additional protection. The forwarding pipe is a privacy boundary against the sender, not against the infrastructure.",
@@ -1993,6 +2229,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/34577/pexels-photo-34577.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Person holding a credit card while using a laptop, representing the paid tier of alias services",
+        },
         heading: "Cost math: $30 a year versus free forever",
         paragraphs: [
           "Let us do the arithmetic nobody does. SimpleLogin Premium is $30 a year — about $2.50 a month, less than a coffee. The free tier gives you 15 aliases at $0, which covers the median user's set of recurring accounts with room to spare. Temp mail is $0 with no tiers and no limits on how many inboxes you burn through. Purely on price, temp mail wins; purely on value-per-dollar, $30 a year for unlimited permanent aliases is one of the cheapest privacy upgrades on the internet.",
@@ -2019,6 +2259,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 12,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/30885763/pexels-photo-30885763.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Wooden blocks spelling encryption, representing the encrypted vault behind Proton Pass",
+        },
         paragraphs: [
           "The proton pass vs temp mail question sounds like a product comparison, but it is really a question about what you are buying. Proton Pass is a password manager that happens to generate email aliases. Temp mail is a disposable inbox that happens to need nothing from you at all. One wants to become the vault for your entire digital identity — passwords, aliases, credit cards, passkeys, all of it. The other wants to forget you existed within the hour. Frame it that way, as a vault that remembers everything against an inbox that remembers nothing, and the choice stops being about feature checklists and starts being about philosophy. This guide puts both through a side-by-side spec test with real numbers, works through three everyday scenarios with actual time-and-cost math, and ends with the single question that settles the debate every time.",
           "A note on method before we start: every number below comes from Proton's own public pricing page and documentation, checked in October 2026, plus timing the real signup flows with a stopwatch. Proton Pass Free includes 10 hide-my-email aliases at $0. Pass Plus removes the cap at $4.99 a month, currently discounted to $2.99 a month billed as $35.88 a year. Temp mail on this site: unlimited inboxes, no signup of any kind, messages wiped one hour after your session ends. Nothing here is sponsored, and neither tool paid for its score.",
@@ -2054,6 +2298,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7821577/pexels-photo-7821577.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Two people working on a laptop displaying an online form, a worked signup scenario",
+        },
         heading: "Three scenarios, worked end to end",
         paragraphs: [
           "Scenario one: the newsletter triage. You want to sample 15 newsletters without giving any of them your real address. On Proton Pass Free, you burn through all 10 aliases by newsletter ten and hit the wall — your options are paying $35.88 a year or deciding which newsletters do not deserve an alias, which is exactly the kind of decision fatigue privacy tools are supposed to eliminate. On temp mail, you open 15 inboxes in about forty-five seconds, read what interests you, and every address is dead within the hour at a total cost of $0. Time spent: roughly eight minutes of alias management on Proton versus under a minute on temp mail. Winner for this job: temp mail, and it is not close.",
@@ -2071,6 +2319,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/6893890/pexels-photo-6893890.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Two people working on laptops in a modern office, weighing three years of subscription costs",
+        },
         heading: "Cost math: three years of aliases",
         paragraphs: [
           "Let us do the arithmetic. Three years of temp mail: $0. Three years of Proton Pass Free: $0, capped at 10 aliases forever. Three years of Pass Plus at the current promo: $35.88 × 3 = $107.64. At the full $4.99-a-month price: $59.88 × 3 = $179.64. One hundred and eight dollars is not a lot of money for three years of unlimited aliases inside a genuinely good password manager — but it is infinitely more than zero, and both paid tiers demand what temp mail never asks for: an account identity on Free, and a payment identity — name, card, billing trail — on Plus.",
@@ -2097,6 +2349,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 12,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/5083396/pexels-photo-5083396.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Professional checking email on a desktop computer in a clean office, the Outlook side of the comparison",
+        },
         paragraphs: [
           "The outlook aliases vs temp mail question is the quiet one in this whole series, because almost everyone reading it already has half the answer installed. If you have ever owned a Windows PC, an Xbox, or an Office subscription, you already have a Microsoft account — and that account already comes with Outlook aliases built in, free, waiting on a settings page you have probably never opened. Temp mail, meanwhile, asks for nothing at all: no account, no settings page, no password to remember. So this is not really a contest between two products. It is a contest between a feature you already own and a tool you have never needed to install, and the honest answer depends entirely on what kind of signup is staring at you right now. This guide runs both through the same tests — setup speed, the alias cap, blocklists, one-time codes, and the failure mode nobody talks about — and ends with the one question that settles it.",
           "Method first: every Outlook number below comes from Microsoft's own public documentation, checked in October 2026. A Microsoft account supports up to 10 aliases, including the primary address you signed up with. Outlook.com's free tier includes 15 GB of mailbox storage, shared across every alias because they all feed one inbox. Temp mail on this site: unlimited inboxes, no signup of any kind, messages wiped one hour after your session ends. Neither company paid for its score, and nothing here is sponsored.",
@@ -2131,6 +2387,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/8441814/pexels-photo-8441814.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Businessman reviewing documents and data on a laptop in an office, a Microsoft-ecosystem scenario",
+        },
         heading: "Three scenarios, worked end to end",
         paragraphs: [
           "Scenario one: the Microsoft loyalist. You already live in Microsoft's world — Windows, Xbox, maybe Office — so you sort your digital life into ten aliases: bank, main shopping, secondary shopping, newsletters, social, gaming, travel, streaming, forums, and one spare. It works beautifully for a year. Then you add a second streaming trial, a coupon site, and a beta signup, and the spare is gone. Alias eleven does not exist, and no subscription you can buy creates it. Your options are deleting an alias some service still depends on, or handing the next signup your primary address — the exact outcome the whole system was built to prevent. The cap does not punish casual users. It punishes organized ones, which is the cruelest kind of limit.",
@@ -2147,6 +2407,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/163066/pexels-photo-163066.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Desk with a planner, pens and a smartphone, planning the long-term cost of an inbox system",
+        },
         heading: "Cost math: three years of aliases",
         paragraphs: [
           "Let us do the arithmetic. Three years of temp mail: $0. Three years of Outlook aliases: $0, capped at ten forever, with no paid tier that lifts the cap. One hundred percent of the difference is not money — it is identity. Outlook costs one Microsoft account identity, disclosed once and then attached to every alias you ever create. Temp mail costs nothing disclosed to anyone, ever. Both are free in dollars; only one is free in identity.",
@@ -2173,6 +2437,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 10,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/2882555/pexels-photo-2882555.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Keyboard letter tiles spelling EMAIL on a coral backdrop, representing the second-account question",
+        },
         paragraphs: [
           "The temp mail vs second gmail account debate starts in the same place for almost everyone: a signup form you do not trust, and a real inbox you do not want to pollute. So you do the sensible-sounding thing. You open a second Gmail account, call it your junk account, and hand that address to every stranger on the internet instead of your real one. It feels like disposable email, it costs nothing, and it even comes with a real inbox that can reply to people. This guide tests whether that feeling survives contact with reality, running both options through the same seven tests: setup speed, identity separation, spam accumulation, lockouts, blocklists, recovery, and the daily friction of actually living with two inboxes.",
           "Method first, so you can trust the verdicts below. The second Gmail account in this comparison is a free Google account created in October 2026, with the standard setup: a phone number for verification, a recovery email, and two-factor authentication switched on. Temp mail here is the service on this site: unlimited inboxes, no signup of any kind, and messages wiped one hour after your session ends. No company paid for its score, nothing here is sponsored, and every number below is either a measured step count or a clearly labelled worked example you can redo with your own numbers.",
@@ -2203,6 +2471,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/1591062/pexels-photo-1591062.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Close-up of the word EMAIL formed with letter tiles, the address behind thirty signups",
+        },
         heading: "The spam math: 30 signups, one year later",
         paragraphs: [
           "Let us run the numbers on a realistic year. You hand your second Gmail account to 30 one-off signups: a few discount codes, some forum registrations, a beta list, a webinar, a couple of free tools. Suppose each sender averages just one promotional email a week, which is modest by retail standards. That is 30 emails a week, 130 a month, and 1,560 a year, all landing in the inbox you created to escape spam. Within months, your junk account is not a junk drawer. It is a landfill with a search box, and you must now wade through it every time one of those 30 senders is the one sender you actually need, like a delivery update or a password reset.",
@@ -2227,6 +2499,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7075408/pexels-photo-7075408.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hands typing on a laptop at a desk, tallying the rounds between two inbox strategies",
+        },
         heading: "The verdict table: seven rounds, one winner per job",
         paragraphs: [
           "Setup speed: temp mail, by a rout, three seconds against eleven minutes. Identity separation: temp mail, structurally, because no account means no link to break. Spam over one year: temp mail, 1,560 messages against zero in the worked example above. Daily friction: temp mail, no switching tax, no second credential to tend. Replies and two-way mail: second Gmail, outright, because temp mail is receive-only and never pretends otherwise. Lifespan and recovery: second Gmail, outright, because a permanent address is the only thing that can receive next year's password reset. Blocklist acceptance: second Gmail, outright, because gmail.com is trusted everywhere and disposable domains are flagged in strict places.",
@@ -2253,6 +2529,10 @@ export const POSTS: BlogPost[] = [
     readMinutes: 12,
     content: [
       {
+        image: {
+          src: "https://images.pexels.com/photos/7120132/pexels-photo-7120132.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Close-up of a hand holding a smartphone displaying a messaging app, the phone number forms keep demanding",
+        },
         paragraphs: [
           "Every signup form seems to want two things from you now: an email address and a phone number. The email is negotiable. You can hand over a disposable address, collect the code, and walk away without a trace. The phone number is the trap, because a phone number is not really a contact detail. It is an identity anchor, a recovery key, and a tracking ID rolled into one string of digits, and once it is in a company's database it tends to stay there long after you have forgotten the account. That is exactly the gap temp mail without phone number verification fills: an inbox you can open in seconds, with no SIM card, no SMS code, and no account tying the address back to you.",
           "This guide explains how phone-free inboxes work, what they can genuinely do, and where they honestly fail. It is written for the ordinary case, not the edge case: you want to try a tool, grab a download, read a gated article, or test a service, and the form is demanding a phone number you do not want to give. By the end you will know when a phone-free inbox is the right tool, when it will get you rejected, and how to build a small system around it so you never have to hand your real number to a form you do not trust.",
@@ -2283,6 +2563,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/10376167/pexels-photo-10376167.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Hands texting on a smartphone with messages on screen, the SMS fallback phone-free inboxes cannot use",
+        },
         heading: "Where phone-free inboxes fail: five hard limits",
         paragraphs: [
           "First, the disposable-domain blocklist. Some strict platforms reject temp-mail domains before the form even submits, and no amount of phone-free cleverness gets around a domain that is already on their list. Our investigation into [how websites detect temp mail](/blog/can-websites-detect-temp-mail) explains the blocklists, MX checks, and detection APIs behind those rejections. If a platform rejects your address outright, that is the platform's policy, not a bug in the inbox, and the honest move is a different tool for that signup.",
@@ -2305,6 +2589,10 @@ export const POSTS: BlogPost[] = [
         ],
       },
       {
+        image: {
+          src: "https://images.pexels.com/photos/7504897/pexels-photo-7504897.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          alt: "Man using a smartphone at a desk with a laptop, running a phone-free signup setup",
+        },
         heading: "The phone-free setup that actually holds up",
         paragraphs: [
           "A tool becomes a system when it has rules, and this one needs only three. Rule one: the lifespan test. Before any signup, ask whether you will need this account in a month. If the honest answer is no, it gets a temp address, no exceptions, no just-for-this-once real addresses. If the answer is yes, it gets your permanent address and, where it matters, your real number. Rule two: one address per signup. Never reuse a temp address across services, because reuse is what turns separate signups into a linkable trail. Rule three: the hour rule. Do the signup and the verification in one sitting, because the inbox deletes itself after sixty minutes and a half-finished signup cannot be rescued later.",
