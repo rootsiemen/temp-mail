@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TempMailApp from "@/components/TempMailApp";
+import { getAllPosts } from "@/lib/blog-store";
+import { formatPostDate } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Free Temporary Email — Instant Disposable Temp Mail (No Signup)",
@@ -99,7 +101,27 @@ const FEATURES = [
   },
 ];
 
-export default function Home() {
+const USE_CASES = [
+  {
+    title: "Free trials without the follow-up",
+    text: "Streaming, software, and fitness trials all want an email up front — and a permanent seat on their marketing list as part of the deal. Start the trial on a disposable address. If you stay, move the account to your real address; if you walk away, the weekly drip campaign dies with the address it was sent to.",
+  },
+  {
+    title: "Downloads, ebooks, and discount codes",
+    text: "Gated PDFs, templates, and one-time coupon codes all trade content for your address. A temp inbox collects the download link or the code in seconds, and your real inbox is spared the 'insights' newsletter that was the actual price of the freebie.",
+  },
+  {
+    title: "One-off accounts and forums",
+    text: "The support forum you will visit twice. The comment section under one article. The Wi-Fi portal at the airport. A throwaway address fits every signup that does not deserve a permanent place in your digital life — useful for ten minutes, gone in an hour.",
+  },
+  {
+    title: "Testing and development",
+    text: "Developers and QA teams spin up fresh addresses to test signup flows, password resets, and notification emails. No test accounts to maintain, no real inbox flooded with staging messages, and every test run starts from a clean, empty inbox.",
+  },
+];
+
+export default async function Home() {
+  const latestPosts = (await getAllPosts()).slice(0, 3);
   return (
     <>
       {/* Hero */}
@@ -192,8 +214,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEO content */}
+      {/* Use cases */}
       <section className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
+              Everyday ways people use Temp Mail
+            </h2>
+            <p className="mt-3 text-slate-600">
+              Most signups do not deserve your real address. These are the
+              moments a disposable one earns its keep.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {USE_CASES.map((u) => (
+              <div
+                key={u.title}
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-6"
+              >
+                <h3 className="text-base font-bold text-slate-900">{u.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{u.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO content */}
+      <section className="bg-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
             What is a temporary email address?
@@ -251,8 +299,118 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Homepage FAQ */}
+      {/* Temp Mail vs real inbox */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
+              Temp Mail vs. your regular inbox
+            </h2>
+            <p className="mt-3 text-slate-600">
+              They are not competitors — they are two tools for two different
+              jobs. The mistake is using one address for both.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-base font-bold text-slate-900">
+                Your real inbox is for keeps
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+                <li>Accounts you will still log into next month</li>
+                <li>Password recovery, receipts, and order history</li>
+                <li>Banking, work, government, and health services</li>
+                <li>Conversations with actual people</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-blue-200 bg-blue-50 p-6">
+              <h3 className="text-base font-bold text-slate-900">
+                Temp Mail is for the moment
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+                <li>Signups you will probably never revisit</li>
+                <li>Verification codes and one-time download links</li>
+                <li>Trials, coupons, and email-gated content</li>
+                <li>Testing your own website&apos;s signup flow</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mx-auto mt-10 max-w-4xl">
+            <h3 className="text-lg font-bold text-slate-900">
+              When temp mail is the wrong tool
+            </h3>
+            <div className="mt-3 space-y-4 text-sm leading-7 text-slate-600 sm:text-base">
+              <p>
+                A temporary address deletes itself — that is the feature, and
+                it is also the limit. Never use one for anything tied to money
+                or identity, for an account you cannot afford to lose access
+                to, or for anything a sender might email you about next week:
+                the message will have nowhere to land. If a service matters,
+                it gets your real address. No exceptions for banking, primary
+                password recovery, or two-factor recovery on important
+                accounts.
+              </p>
+              <p>
+                Used well, temp mail is a hygiene habit, not a hiding place.
+                Keep one habit in mind: use a different address per service,
+                so no two signups can be linked together if one of them leaks.
+                Treat links inside a temporary inbox with the same caution as
+                any email — we sandbox the HTML, but a too-good-to-be-true
+                offer is still a too-good-to-be-true offer. And when you are
+                done, press Delete: an address you discard cannot receive
+                another message, ever.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* From the blog */}
       <section className="bg-slate-50">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
+              Guides from the Temp Mail blog
+            </h2>
+            <p className="mt-3 text-slate-600">
+              Practical, honest writing on disposable email and inbox privacy —
+              the strategy behind the tool.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {latestPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-blue-300 hover:shadow-md"
+              >
+                <div className="flex items-center gap-3 text-xs text-slate-500">
+                  <time dateTime={post.date}>{formatPostDate(post.date)}</time>
+                  <span aria-hidden="true">·</span>
+                  <span>{post.readMinutes} min read</span>
+                </div>
+                <h3 className="mt-3 text-base font-bold text-slate-900 group-hover:text-blue-700">
+                  {post.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {post.excerpt}
+                </p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/blog"
+              className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
+            >
+              Browse all guides
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Homepage FAQ */}
+      <section className="bg-white">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}

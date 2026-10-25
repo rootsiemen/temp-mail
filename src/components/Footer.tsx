@@ -13,6 +13,7 @@ const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
     title: "Company",
     links: [
       { href: "/about", label: "About us" },
+      { href: "/contact", label: "Contact us" },
       { href: "/blog", label: "Blog" },
     ],
   },

@@ -177,6 +177,10 @@ export default function AboutPage() {
             Questions? Check our{" "}
             <Link href="/faq" className="font-semibold text-blue-600 hover:underline">
               FAQ
+            </Link>
+            ,{" "}
+            <Link href="/contact" className="font-semibold text-blue-600 hover:underline">
+              contact us
             </Link>{" "}
             or start using your first address on the{" "}
             <Link href="/" className="font-semibold text-blue-600 hover:underline">
